@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\Calendar;
@@ -43,6 +43,9 @@ enum Semester: int implements DescribedEnumInterface, LabeledEnumInterface
     case H1 = 1;
     case H2 = 2;
 
+    /**
+     * @return string
+     */
     public function description(): string
     {
         return match ($this) {
@@ -58,7 +61,14 @@ enum Semester: int implements DescribedEnumInterface, LabeledEnumInterface
     {
         return match ($this) {
             self::H1 => [Month::January, Month::February, Month::March, Month::April, Month::May, Month::June],
-            self::H2 => [Month::July, Month::August, Month::September, Month::October, Month::November, Month::December],
+            self::H2 => [
+                Month::July,
+                Month::August,
+                Month::September,
+                Month::October,
+                Month::November,
+                Month::December,
+            ],
         };
     }
 
@@ -73,26 +83,47 @@ enum Semester: int implements DescribedEnumInterface, LabeledEnumInterface
         };
     }
 
+    /**
+     * @return Month
+     */
     public function startMonth(): Month
     {
         return $this->months()[0];
     }
 
+    /**
+     * @return Month
+     */
     public function endMonth(): Month
     {
         return $this->months()[5];
     }
 
+    /**
+     * @param Month $month
+     *
+     * @return bool
+     */
     public function includes(Month $month): bool
     {
         return $this->is(self::fromMonth($month));
     }
 
+    /**
+     * @param Month $month
+     *
+     * @return self
+     */
     public static function fromMonth(Month $month): self
     {
         return $month->value <= Month::June->value ? self::H1 : self::H2;
     }
 
+    /**
+     * @param Quarter $quarter
+     *
+     * @return self
+     */
     public static function fromQuarter(Quarter $quarter): self
     {
         return $quarter->value <= Quarter::Q2->value ? self::H1 : self::H2;

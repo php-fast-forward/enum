@@ -88,6 +88,25 @@ Seeing a Packaged Enum
    LogLevel::Critical->isAtLeast(LogLevel::Warning); // true
    SortDirection::Descending->reverse();    // SortDirection::Ascending
 
+Choosing the Right Surface
+--------------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Need
+     - Use
+     - Why
+   * - Add methods to your own enum
+     - Traits
+     - The enum advertises the API directly, such as ``Status::values()``.
+   * - Inspect an enum you do not own
+     - ``EnumHelper``
+     - Helpers work with class strings and enum cases without changing the enum declaration.
+   * - Reuse a general concept
+     - Packaged enums
+     - Shared enums provide stable semantics for calendars, sorting, runtime environments, logging levels, and similar concerns.
+
 What to read next
 -----------------
 

@@ -11,6 +11,43 @@ Main trait groups
 These traits are intentionally small and composable. Use only the traits that
 match the behavior your enum really needs.
 
+Compatibility matrix
+--------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Trait
+     - Enum requirement
+     - Public methods
+   * - ``HasNames``
+     - any enum
+     - ``names()``
+   * - ``HasValues``
+     - backed enum
+     - ``values()``
+   * - ``HasOptions``
+     - backed enum
+     - ``options()``
+   * - ``HasNameLookup``
+     - any enum
+     - ``tryFromName()``, ``fromName()``, ``hasName()``
+   * - ``HasNameMap``
+     - any enum
+     - ``nameMap()``
+   * - ``HasValueMap``
+     - backed enum
+     - ``valueMap()``
+   * - ``Comparable``
+     - any enum
+     - ``is()``, ``isNot()``, ``in()``, ``notIn()``
+   * - ``HasDescription``
+     - any enum
+     - ``description()``
+   * - ``HasLabel``
+     - any enum
+     - ``label()``
+
 Collection traits
 -----------------
 

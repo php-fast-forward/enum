@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\Comparison;
@@ -50,6 +50,9 @@ enum ComparisonOperator: string implements DescribedEnumInterface, LabeledEnumIn
     case In = 'in';
     case NotIn = 'not_in';
 
+    /**
+     * @return string
+     */
     public function description(): string
     {
         return match ($this) {
@@ -64,6 +67,9 @@ enum ComparisonOperator: string implements DescribedEnumInterface, LabeledEnumIn
         };
     }
 
+    /**
+     * @return string
+     */
     public function symbol(): string
     {
         return match ($this) {
@@ -78,11 +84,20 @@ enum ComparisonOperator: string implements DescribedEnumInterface, LabeledEnumIn
         };
     }
 
+    /**
+     * @return bool
+     */
     public function isSetOperator(): bool
     {
         return $this->in([self::In, self::NotIn]);
     }
 
+    /**
+     * @param mixed $left
+     * @param mixed $right
+     *
+     * @return bool
+     */
     public function compare(mixed $left, mixed $right): bool
     {
         return match ($this) {
@@ -92,11 +107,14 @@ enum ComparisonOperator: string implements DescribedEnumInterface, LabeledEnumIn
             self::GreaterThanOrEqual => $left >= $right,
             self::LessThan => $left < $right,
             self::LessThanOrEqual => $left <= $right,
-            self::In => in_array($left, $this->candidateSet($right), true),
-            self::NotIn => ! in_array($left, $this->candidateSet($right), true),
+            self::In => \in_array($left, $this->candidateSet($right), true),
+            self::NotIn => ! \in_array($left, $this->candidateSet($right), true),
         };
     }
 
+    /**
+     * @return self
+     */
     public function negate(): self
     {
         return match ($this) {
@@ -112,15 +130,14 @@ enum ComparisonOperator: string implements DescribedEnumInterface, LabeledEnumIn
     }
 
     /**
+     * @param mixed $right
+     *
      * @return list<mixed>
      */
     private function candidateSet(mixed $right): array
     {
-        if (! is_array($right)) {
-            throw new ValueError(sprintf(
-                'Comparison operator %s expects an array candidate set.',
-                $this->name,
-            ));
+        if (! \is_array($right)) {
+            throw new ValueError(\sprintf('Comparison operator %s expects an array candidate set.', $this->name));
         }
 
         return array_values($right);

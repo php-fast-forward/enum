@@ -3,25 +3,28 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\Tests\Helper;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Attributes\UsesTrait;
 use PHPUnit\Framework\TestCase;
 use FastForward\Enum\Helper\EnumHelper;
+use FastForward\Enum\LabeledEnumInterface;
+use FastForward\Enum\Trait\HasLabel;
 use FastForward\Enum\Tests\Support\DefaultLabeledStatus;
 use FastForward\Enum\Tests\Support\Direction;
 use FastForward\Enum\Tests\Support\Priority;
@@ -30,8 +33,12 @@ use ValueError;
 use stdClass;
 
 #[CoversClass(EnumHelper::class)]
+#[UsesTrait(HasLabel::class)]
 final class EnumHelperTest extends TestCase
 {
+    /**
+     * @return void
+     */
     #[Test]
     public function itReturnsNamesForUnitEnums(): void
     {
@@ -39,6 +46,9 @@ final class EnumHelperTest extends TestCase
         self::assertSame(['North', 'South'], EnumHelper::names(Direction::North));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itReturnsValuesForBackedEnums(): void
     {
@@ -46,6 +56,9 @@ final class EnumHelperTest extends TestCase
         self::assertSame(['draft', 'published'], EnumHelper::values(Status::Draft));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itBuildsMapsForNamesAndValues(): void
     {
@@ -60,6 +73,9 @@ final class EnumHelperTest extends TestCase
         ], EnumHelper::valueMap(Status::Draft));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itBuildsOptionsForBackedEnums(): void
     {
@@ -74,13 +90,20 @@ final class EnumHelperTest extends TestCase
         ], EnumHelper::options(Status::Draft));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itCanLookUpCasesByName(): void
     {
         self::assertSame(Direction::South, EnumHelper::fromName(Direction::class, 'South'));
         self::assertSame(Direction::North, EnumHelper::fromName(Direction::South, 'North'));
+        self::assertNull(EnumHelper::tryFromName(Direction::class, 'East'));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itThrowsForInvalidNames(): void
     {
@@ -90,6 +113,9 @@ final class EnumHelperTest extends TestCase
         EnumHelper::fromName(Status::class, 'Archived');
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itChecksForBackedValues(): void
     {
@@ -98,6 +124,9 @@ final class EnumHelperTest extends TestCase
         self::assertTrue(EnumHelper::hasValue(Status::Draft, 'draft'));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itRejectsNonBackedEnumClassStringsForBackedHelpers(): void
     {
@@ -107,6 +136,9 @@ final class EnumHelperTest extends TestCase
         EnumHelper::values(Direction::class);
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itRejectsNonEnumClassStringsForUnitHelpers(): void
     {
@@ -116,6 +148,9 @@ final class EnumHelperTest extends TestCase
         EnumHelper::names(stdClass::class);
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itExposesLabelsForLabeledEnums(): void
     {
@@ -129,5 +164,17 @@ final class EnumHelperTest extends TestCase
             DefaultLabeledStatus::class . ' Draft',
             DefaultLabeledStatus::class . ' Published',
         ], EnumHelper::labels(DefaultLabeledStatus::class));
+    }
+
+    /**
+     * @return void
+     */
+    #[Test]
+    public function itRejectsNonLabeledEnumsForLabelHelpers(): void
+    {
+        $this->expectException(ValueError::class);
+        $this->expectExceptionMessage('Enum ' . Status::class . ' must implement ' . LabeledEnumInterface::class . '.');
+
+        EnumHelper::labels(Status::class);
     }
 }

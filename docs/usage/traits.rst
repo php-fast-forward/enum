@@ -75,3 +75,70 @@ Use only the traits that reflect real public behavior:
 
 If the trait API would be used in only one place, ``EnumHelper`` is often the
 better fit.
+
+Trait Reference
+---------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Trait
+     - Works with
+     - Adds
+     - Typical return
+   * - ``HasNames``
+     - ``UnitEnum``
+     - ``names()``
+     - ``list<string>``
+   * - ``HasValues``
+     - ``BackedEnum``
+     - ``values()``
+     - ``list<int|string>``
+   * - ``HasOptions``
+     - ``BackedEnum``
+     - ``options()``
+     - ``array<string, int|string>``
+   * - ``HasNameLookup``
+     - ``UnitEnum``
+     - ``tryFromName()``, ``fromName()``, ``hasName()``
+     - enum case, ``null``, or ``bool``
+   * - ``HasNameMap``
+     - ``UnitEnum``
+     - ``nameMap()``
+     - ``array<string, self>``
+   * - ``HasValueMap``
+     - ``BackedEnum``
+     - ``valueMap()``
+     - ``array<int|string, self>``
+   * - ``Comparable``
+     - ``UnitEnum``
+     - ``is()``, ``isNot()``, ``in()``, ``notIn()``
+     - ``bool``
+   * - ``HasDescription``
+     - ``UnitEnum``
+     - ``description()``
+     - readable text derived from the case name
+   * - ``HasLabel``
+     - ``UnitEnum``
+     - ``label()``
+     - ``self::class`` followed by the case name
+
+The backed-only traits rely on ``$case->value``. PHP exposes that property only
+on backed enums, so unit enums should use name-based traits instead.
+
+Labels and Descriptions
+-----------------------
+
+``HasDescription`` converts the case name into a readable phrase, which is
+useful for internal explanations and generated documentation.
+
+``HasLabel`` intentionally returns a technical fallback label containing the
+enum class and case name. That makes it safe for diagnostics because labels from
+different enums remain distinguishable.
+
+.. code-block:: php
+
+   Status::Draft->label(); // 'App\Domain\Status Draft'
+
+For user-facing UI, implement ``LabeledEnumInterface`` manually so each label
+uses product language instead of class names.

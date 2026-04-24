@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\Calendar;
@@ -48,6 +48,9 @@ enum Weekday: int implements DescribedEnumInterface, LabeledEnumInterface
     case Saturday = 6;
     case Sunday = 7;
 
+    /**
+     * @return string
+     */
     public function description(): string
     {
         return match ($this) {
@@ -61,11 +64,17 @@ enum Weekday: int implements DescribedEnumInterface, LabeledEnumInterface
         };
     }
 
+    /**
+     * @return bool
+     */
     public function isWeekend(): bool
     {
         return $this->in([self::Saturday, self::Sunday]);
     }
 
+    /**
+     * @return bool
+     */
     public function isWeekday(): bool
     {
         return ! $this->isWeekend();

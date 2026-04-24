@@ -3,23 +3,24 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\Tests\Common;
 
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use FastForward\Enum\Calendar\Month;
 use FastForward\Enum\Calendar\Quarter;
@@ -32,6 +33,7 @@ use FastForward\Enum\Common\Priority;
 use FastForward\Enum\Outcome\Result;
 use FastForward\Enum\Runtime\Environment;
 use FastForward\Enum\Common\Severity;
+use FastForward\Enum\Helper\EnumHelper;
 
 #[CoversClass(ComparisonOperator::class)]
 #[CoversClass(Environment::class)]
@@ -44,8 +46,12 @@ use FastForward\Enum\Common\Severity;
 #[CoversClass(Semester::class)]
 #[CoversClass(Severity::class)]
 #[CoversClass(Weekday::class)]
+#[UsesClass(EnumHelper::class)]
 final class CommonEnumTest extends TestCase
 {
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableComparisonOperatorEnum(): void
     {
@@ -58,6 +64,9 @@ final class CommonEnumTest extends TestCase
         self::assertSame(ComparisonOperator::LessThan, ComparisonOperator::GreaterThanOrEqual->negate());
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableEnvironmentEnum(): void
     {
@@ -74,19 +83,22 @@ final class CommonEnumTest extends TestCase
         self::assertSame(Environment::Staging, Environment::fromName('Staging'));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableIntervalUnitEnum(): void
     {
-        self::assertSame(
-            ['second', 'minute', 'hour', 'day', 'week', 'month', 'year'],
-            IntervalUnit::values(),
-        );
+        self::assertSame(['second', 'minute', 'hour', 'day', 'week', 'month', 'year'], IntervalUnit::values());
         self::assertSame('min', IntervalUnit::Minute->shortLabel());
         self::assertSame(5400, IntervalUnit::Minute->seconds(90));
         self::assertFalse(IntervalUnit::Week->isCalendarAware());
         self::assertTrue(IntervalUnit::Month->isCalendarAware());
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusablePriorityEnum(): void
     {
@@ -105,6 +117,9 @@ final class CommonEnumTest extends TestCase
         self::assertSame(40, Priority::Critical->weight());
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableSeverityEnum(): void
     {
@@ -118,6 +133,9 @@ final class CommonEnumTest extends TestCase
         );
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableWeekdayEnum(): void
     {
@@ -126,11 +144,22 @@ final class CommonEnumTest extends TestCase
         self::assertFalse(Weekday::Wednesday->isWeekend());
         self::assertTrue(Weekday::Wednesday->isWeekday());
         self::assertSame(
-            [Weekday::Monday, Weekday::Tuesday, Weekday::Wednesday, Weekday::Thursday, Weekday::Friday, Weekday::Saturday, Weekday::Sunday],
+            [
+                Weekday::Monday,
+                Weekday::Tuesday,
+                Weekday::Wednesday,
+                Weekday::Thursday,
+                Weekday::Friday,
+                Weekday::Saturday,
+                Weekday::Sunday,
+            ],
             Weekday::ordered(),
         );
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableMonthEnum(): void
     {
@@ -144,6 +173,9 @@ final class CommonEnumTest extends TestCase
         );
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableLogLevelEnum(): void
     {
@@ -155,11 +187,23 @@ final class CommonEnumTest extends TestCase
         self::assertFalse(LogLevel::Info->isAtLeast(LogLevel::Error));
         self::assertSame(80, LogLevel::Emergency->weight());
         self::assertSame(
-            [LogLevel::Debug, LogLevel::Info, LogLevel::Notice, LogLevel::Warning, LogLevel::Error, LogLevel::Critical, LogLevel::Alert, LogLevel::Emergency],
+            [
+                LogLevel::Debug,
+                LogLevel::Info,
+                LogLevel::Notice,
+                LogLevel::Warning,
+                LogLevel::Error,
+                LogLevel::Critical,
+                LogLevel::Alert,
+                LogLevel::Emergency,
+            ],
             LogLevel::ordered(),
         );
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableQuarterEnum(): void
     {
@@ -172,6 +216,9 @@ final class CommonEnumTest extends TestCase
         self::assertSame(Quarter::Q2, Quarter::fromMonth(Month::May));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableResultEnum(): void
     {
@@ -183,6 +230,9 @@ final class CommonEnumTest extends TestCase
         self::assertSame('Operation completed only in part and may require follow-up.', Result::Partial->description());
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesAReusableSemesterEnum(): void
     {

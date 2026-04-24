@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\Helper;
@@ -50,10 +50,7 @@ final class EnumHelper
     {
         $enumClass = self::unitEnumClass($enum);
 
-        return array_map(
-            static fn (UnitEnum $case): string => $case->name,
-            $enumClass::cases(),
-        );
+        return array_map(static fn(UnitEnum $case): string => $case->name, $enumClass::cases());
     }
 
     /**
@@ -67,10 +64,7 @@ final class EnumHelper
     {
         $enumClass = self::backedEnumClass($enum);
 
-        return array_map(
-            static fn (BackedEnum $case): int|string => $case->value,
-            $enumClass::cases(),
-        );
+        return array_map(static fn(BackedEnum $case): int|string => $case->value, $enumClass::cases());
     }
 
     /**
@@ -134,6 +128,7 @@ final class EnumHelper
      * @template T of UnitEnum
      *
      * @param class-string<T>|T $enum
+     * @param string $name
      */
     public static function hasName(string|UnitEnum $enum, string $name): bool
     {
@@ -144,18 +139,20 @@ final class EnumHelper
      * @template T of BackedEnum
      *
      * @param class-string<T>|T $enum
+     * @param int|string $value
      */
     public static function hasValue(string|BackedEnum $enum, int|string $value): bool
     {
         $enumClass = self::backedEnumClass($enum);
 
-        return $enumClass::tryFrom($value) !== null;
+        return null !== $enumClass::tryFrom($value);
     }
 
     /**
      * @template T of UnitEnum
      *
      * @param class-string<T>|T $enum
+     * @param string $name
      *
      * @return T|null
      */
@@ -168,6 +165,7 @@ final class EnumHelper
      * @template T of UnitEnum
      *
      * @param class-string<T>|T $enum
+     * @param string $name
      *
      * @return T
      */
@@ -176,7 +174,7 @@ final class EnumHelper
         $enumClass = self::unitEnumClass($enum);
 
         return self::tryFromName($enumClass, $name)
-            ?? throw new ValueError(sprintf('"%s" is not a valid name for enum %s.', $name, $enumClass));
+            ?? throw new ValueError(\sprintf('"%s" is not a valid name for enum %s.', $name, $enumClass));
     }
 
     /**
@@ -188,12 +186,9 @@ final class EnumHelper
      */
     public static function labels(string|UnitEnum $enum): array
     {
-        $enumClass = self::unitEnumClass($enum);
+        $enumClass = self::labeledEnumClass($enum);
 
-        return array_map(
-            static fn (LabeledEnumInterface $case): string => $case->label(),
-            $enumClass::cases(),
-        );
+        return array_map(static fn(LabeledEnumInterface $case): string => $case->label(), $enumClass::cases());
     }
 
     /**
@@ -205,7 +200,7 @@ final class EnumHelper
      */
     public static function labelMap(string|UnitEnum $enum): array
     {
-        $enumClass = self::unitEnumClass($enum);
+        $enumClass = self::labeledEnumClass($enum);
         $map = [];
 
         foreach ($enumClass::cases() as $case) {
@@ -225,10 +220,10 @@ final class EnumHelper
     private static function unitEnumClass(string|UnitEnum $enum): string
     {
         /** @var class-string<T> $enumClass */
-        $enumClass = is_string($enum) ? $enum : $enum::class;
+        $enumClass = \is_string($enum) ? $enum : $enum::class;
 
-        if (!enum_exists($enumClass) || !is_subclass_of($enumClass, UnitEnum::class, true)) {
-            throw new ValueError(sprintf('Enum %s must be a unit enum.', $enumClass));
+        if (! enum_exists($enumClass) || ! is_subclass_of($enumClass, UnitEnum::class, true)) {
+            throw new ValueError(\sprintf('Enum %s must be a unit enum.', $enumClass));
         }
 
         return $enumClass;
@@ -244,10 +239,29 @@ final class EnumHelper
     private static function backedEnumClass(string|BackedEnum $enum): string
     {
         /** @var class-string<T> $enumClass */
-        $enumClass = is_string($enum) ? $enum : $enum::class;
+        $enumClass = \is_string($enum) ? $enum : $enum::class;
 
-        if (!enum_exists($enumClass) || !is_subclass_of($enumClass, BackedEnum::class, true)) {
-            throw new ValueError(sprintf('Enum %s must be a backed enum.', $enumClass));
+        if (! enum_exists($enumClass) || ! is_subclass_of($enumClass, BackedEnum::class, true)) {
+            throw new ValueError(\sprintf('Enum %s must be a backed enum.', $enumClass));
+        }
+
+        return $enumClass;
+    }
+
+    /**
+     * @template T of UnitEnum&LabeledEnumInterface
+     *
+     * @param class-string<T>|T $enum
+     *
+     * @return class-string<T>
+     */
+    private static function labeledEnumClass(string|UnitEnum $enum): string
+    {
+        /** @var class-string<T> $enumClass */
+        $enumClass = self::unitEnumClass($enum);
+
+        if (! is_subclass_of($enumClass, LabeledEnumInterface::class, true)) {
+            throw new ValueError(\sprintf('Enum %s must implement %s.', $enumClass, LabeledEnumInterface::class));
         }
 
         return $enumClass;

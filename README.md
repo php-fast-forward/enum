@@ -33,6 +33,9 @@ Requirements:
 
 - PHP `^8.3`
 
+New to the package? Start with the [Quickstart](docs/getting-started/quickstart.rst), then use the
+[Usage guide](docs/usage/index.rst) when you want more complete examples.
+
 ## 🛠️ Usage
 
 Basic enum ergonomics:
@@ -189,8 +192,8 @@ Scheme::Https->defaultPort(); // 443
 SignalBehavior::Handle->isTerminalControl(); // true
 Weekday::Saturday->isWeekend(); // true
 Month::December->quarter(); // 4
-Quarter::Q2->months(); // [April, May, June]
-Semester::H2->quarters(); // [Q3, Q4]
+Quarter::Q2->months(); // [Month::April, Month::May, Month::June]
+Semester::H2->quarters(); // [Quarter::Q3, Quarter::Q4]
 SortDirection::Descending->reverse(); // SortDirection::Ascending
 NullsPosition::Last->compareNullability(null, 'value'); // 1
 CaseSensitivity::Insensitive->equals('Draft', 'draft'); // true
@@ -209,8 +212,12 @@ ComparisonResult::fromComparisonResult(-1); // ComparisonResult::RightGreater
 | `Trait\HasNameMap` / `Trait\HasValueMap` | Builds lookup maps for names and backed values |
 | `Trait\Comparable` | Adds `is()`, `isNot()`, `in()`, and `notIn()` |
 | `Trait\HasDescription` | Generates readable descriptions from case names |
+| `Trait\HasLabel` | Provides a technical fallback `label()` implementation |
+| `LabeledEnumInterface` | Contract for enums that expose presentation labels |
+| `DescribedEnumInterface` | Contract for enums that expose human-readable descriptions |
 | `ReversibleInterface` | Common contract for enums exposing `reverse()` |
 | `StateMachine\HasTransitions` | Adds transition, terminal, and initial-state behavior to workflow enums |
+| `StateMachine\InvalidTransitionException` | Exception thrown by invalid workflow transitions |
 
 ## 🔌 Integration
 

@@ -63,6 +63,21 @@ Useful methods:
 - ``Quarter::includes()``
 - ``Quarter::fromMonth()``
 
+``Calendar\\Semester`` and ``Calendar\\Weekday``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use these when reports, schedules, or recurring jobs need names that are more
+explicit than raw integers.
+
+Useful methods:
+
+- ``Semester::months()``
+- ``Semester::includes()``
+- ``Semester::fromMonth()``
+- ``Weekday::isWeekend()``
+- ``Weekday::isWeekday()``
+- ``Weekday::ordered()``
+
 ``DateTime\\IntervalUnit``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -115,6 +130,71 @@ Useful methods:
 - ``isSetOperator()``
 - ``compare()``
 - ``negate()``
+
+``Common\\Priority``
+^^^^^^^^^^^^^^^^^^^^
+
+Use this when work queues, support tickets, alerts, or retry policies need a
+small reusable priority vocabulary.
+
+Useful methods:
+
+- ``weight()``
+- ``isHigherThan()``
+- ``isLowerThan()``
+- ``ordered()``
+
+``Http\\Scheme``
+^^^^^^^^^^^^^^^^
+
+Use this when URLs or transport policies should distinguish ``http`` and
+``https`` without string checks.
+
+Useful methods:
+
+- ``isSecure()``
+- inherited enum helper behavior such as ``values()`` and ``fromName()``
+
+``Process\\SignalBehavior``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use this when process runners or worker loops need to describe what should
+happen after a signal.
+
+Useful methods:
+
+- ``isTerminalControl()``
+
+``Event\\DispatchMode``
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Use this when an event dispatcher, message bridge, or outbox integration needs
+to carry whether work is expected to happen now or later.
+
+Useful methods:
+
+- ``isSync()``
+- ``isAsync()``
+
+``Container\\ServiceLifetime``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use this when a container adapter needs a small non-PSR-specific vocabulary for
+singleton and transient services.
+
+Useful methods:
+
+- ``isReusable()``
+
+``Pipeline\\FailureMode``
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use this when pipeline or middleware execution needs to state whether a failure
+stops the chain or is collected while execution continues.
+
+Useful methods:
+
+- ``stopsOnFailure()``
 
 ``Outcome\\Result``
 ^^^^^^^^^^^^^^^^^^^

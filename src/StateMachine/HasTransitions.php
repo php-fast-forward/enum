@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\StateMachine;
@@ -41,11 +41,21 @@ trait HasTransitions
         return self::transitionMap()[$this->name] ?? [];
     }
 
+    /**
+     * @param self $target
+     *
+     * @return bool
+     */
     public function canTransitionTo(self $target): bool
     {
-        return in_array($target, $this->allowedTransitions(), true);
+        return \in_array($target, $this->allowedTransitions(), true);
     }
 
+    /**
+     * @param self $target
+     *
+     * @return void
+     */
     public function assertCanTransitionTo(self $target): void
     {
         if (! $this->canTransitionTo($target)) {
@@ -53,14 +63,20 @@ trait HasTransitions
         }
     }
 
+    /**
+     * @return bool
+     */
     public function isTerminal(): bool
     {
         return [] === $this->allowedTransitions();
     }
 
+    /**
+     * @return bool
+     */
     public function isInitial(): bool
     {
-        return in_array($this, self::initialStates(), true);
+        return \in_array($this, self::initialStates(), true);
     }
 
     /**
@@ -84,7 +100,7 @@ trait HasTransitions
 
         return array_values(array_filter(
             self::cases(),
-            static fn (self $case): bool => ! isset($incoming[$case->name]),
+            static fn(self $case): bool => ! isset($incoming[$case->name]),
         ));
     }
 
@@ -93,9 +109,6 @@ trait HasTransitions
      */
     public static function terminalStates(): array
     {
-        return array_values(array_filter(
-            self::cases(),
-            static fn (self $case): bool => $case->isTerminal(),
-        ));
+        return array_values(array_filter(self::cases(), static fn(self $case): bool => $case->isTerminal()));
     }
 }

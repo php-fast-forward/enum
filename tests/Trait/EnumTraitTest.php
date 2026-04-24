@@ -3,27 +3,26 @@
 declare(strict_types=1);
 
 /**
- * This file is part of php-fast-forward/enum.
+ * Ergonomic utilities for PHP enums, including names, values, lookups, and option maps.
  *
- * This source file is subject to the license bundled
- * with this source code in the file LICENSE.
+ * This file is part of fast-forward/enum project.
  *
- * @copyright Copyright (c) 2026 Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
- * @license   https://opensource.org/licenses/MIT MIT License
+ * @author   Felipe Sayão Lobato Abreu <github@mentordosnerds.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
  *
- * @see       https://github.com/php-fast-forward/enum
- * @see       https://github.com/php-fast-forward
- * @see       https://datatracker.ietf.org/doc/html/rfc2119
+ * @see      https://github.com/php-fast-forward/enum
+ * @see      https://github.com/php-fast-forward/enum/issues
+ * @see      https://php-fast-forward.github.io/enum/
+ * @see      https://datatracker.ietf.org/doc/html/rfc2119
  */
 
 namespace FastForward\Enum\Tests\Trait;
 
 use PHPUnit\Framework\Attributes\Test;
-use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversTrait;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
-use FastForward\Enum\DescribedEnumInterface;
-use FastForward\Enum\LabeledEnumInterface;
+use FastForward\Enum\Helper\EnumHelper;
 use FastForward\Enum\Trait\Comparable;
 use FastForward\Enum\Trait\HasDescription;
 use FastForward\Enum\Trait\HasLabel;
@@ -37,19 +36,21 @@ use FastForward\Enum\Tests\Support\DefaultLabeledStatus;
 use FastForward\Enum\Tests\Support\Direction;
 use FastForward\Enum\Tests\Support\Status;
 
-#[CoversClass(Comparable::class)]
-#[UsesClass(DescribedEnumInterface::class)]
-#[CoversClass(HasDescription::class)]
-#[CoversClass(HasLabel::class)]
-#[CoversClass(HasNameLookup::class)]
-#[CoversClass(HasNameMap::class)]
-#[CoversClass(HasNames::class)]
-#[CoversClass(HasOptions::class)]
-#[CoversClass(HasValueMap::class)]
-#[CoversClass(HasValues::class)]
-#[UsesClass(LabeledEnumInterface::class)]
+#[CoversTrait(Comparable::class)]
+#[CoversTrait(HasDescription::class)]
+#[CoversTrait(HasLabel::class)]
+#[CoversTrait(HasNameLookup::class)]
+#[CoversTrait(HasNameMap::class)]
+#[CoversTrait(HasNames::class)]
+#[CoversTrait(HasOptions::class)]
+#[CoversTrait(HasValueMap::class)]
+#[CoversTrait(HasValues::class)]
+#[UsesClass(EnumHelper::class)]
 final class EnumTraitTest extends TestCase
 {
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesUnitEnumLookupAndMappingTraits(): void
     {
@@ -60,6 +61,9 @@ final class EnumTraitTest extends TestCase
         ], Direction::nameMap());
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesBackedEnumValueAndOptionTraits(): void
     {
@@ -79,15 +83,18 @@ final class EnumTraitTest extends TestCase
         self::assertSame(Status::Published, Status::fromName('Published'));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesADefaultClassBasedLabelTrait(): void
     {
-        self::assertSame(
-            DefaultLabeledStatus::class . ' Draft',
-            DefaultLabeledStatus::Draft->label(),
-        );
+        self::assertSame(DefaultLabeledStatus::class . ' Draft', DefaultLabeledStatus::Draft->label());
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesComparableHelpers(): void
     {
@@ -97,6 +104,9 @@ final class EnumTraitTest extends TestCase
         self::assertTrue(Status::Draft->notIn([Status::Published]));
     }
 
+    /**
+     * @return void
+     */
     #[Test]
     public function itProvidesADefaultDescriptionTrait(): void
     {

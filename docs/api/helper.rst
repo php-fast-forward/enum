@@ -84,8 +84,32 @@ Failure behavior
 
 - methods that require any enum validate ``UnitEnum``
 - methods that require backed values validate ``BackedEnum``
+- ``fromName()`` throws ``ValueError`` when the name does not match any case
+- ``tryFromName()`` returns ``null`` when the name does not match any case
+- ``labels()`` and ``labelMap()`` require enums implementing ``LabeledEnumInterface``
 
 If the wrong type is passed, the helper throws ``ValueError`` instead of
 failing later in a less obvious way.
+
+Examples:
+
+.. code-block:: php
+
+   <?php
+
+   declare(strict_types=1);
+
+   use FastForward\Enum\Helper\EnumHelper;
+
+   EnumHelper::tryFromName(Status::class, 'Unknown'); // null
+
+   EnumHelper::fromName(Status::class, 'Unknown');
+   // throws ValueError
+
+   EnumHelper::values(UnitOnlyStatus::class);
+   // throws ValueError because values require a backed enum
+
+   EnumHelper::labels(Status::class);
+   // throws ValueError unless Status implements LabeledEnumInterface
 
 Use it when you want enum utilities without mixing traits into the enum definition itself.
