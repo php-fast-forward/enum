@@ -29,8 +29,10 @@ on:
         default: release/v
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
+  repository-projects: write
 
 jobs:
   changelog:
