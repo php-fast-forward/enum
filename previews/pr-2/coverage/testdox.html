@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Common Enum (FastForward\Enum\Tests\Common\CommonEnum)</h2>
+        <ul>
+            <li class="success">It provides a reusable comparison operator enum</li>
+            <li class="success">It provides a reusable environment enum</li>
+            <li class="success">It provides a reusable interval unit enum</li>
+            <li class="success">It provides a reusable priority enum</li>
+            <li class="success">It provides a reusable severity enum</li>
+            <li class="success">It provides a reusable weekday enum</li>
+            <li class="success">It provides a reusable month enum</li>
+            <li class="success">It provides a reusable log level enum</li>
+            <li class="success">It provides a reusable quarter enum</li>
+            <li class="success">It provides a reusable result enum</li>
+            <li class="success">It provides a reusable semester enum</li>
+        </ul>
+        <h2>Comparison Result (FastForward\Enum\Tests\Sort\ComparisonResult)</h2>
+        <ul>
+            <li class="success">It provides names and name lookup helpers</li>
+            <li class="success">It converts comparator results to comparison result cases</li>
+            <li class="success">It converts comparison result cases back to comparator results</li>
+            <li class="success">It can be reversed and checked for comparability</li>
+        </ul>
+        <h2>Domain Enum (FastForward\Enum\Tests\DomainEnum)</h2>
+        <ul>
+            <li class="success">It provides event enums</li>
+            <li class="success">It provides container and pipeline enums</li>
+            <li class="success">It provides http enums</li>
+            <li class="success">It provides process enums</li>
+        </ul>
+        <h2>Enum Helper (FastForward\Enum\Tests\Helper\EnumHelper)</h2>
+        <ul>
+            <li class="success">It returns names for unit enums</li>
+            <li class="success">It returns values for backed enums</li>
+            <li class="success">It builds maps for names and values</li>
+            <li class="success">It builds options for backed enums</li>
+            <li class="success">It can look up cases by name</li>
+            <li class="success">It throws for invalid names</li>
+            <li class="success">It checks for backed values</li>
+            <li class="success">It rejects non backed enum class strings for backed helpers</li>
+            <li class="success">It rejects non enum class strings for unit helpers</li>
+            <li class="success">It exposes labels for labeled enums</li>
+            <li class="success">It rejects non labeled enums for label helpers</li>
+        </ul>
+        <h2>Enum Trait (FastForward\Enum\Tests\Trait\EnumTrait)</h2>
+        <ul>
+            <li class="success">It provides unit enum lookup and mapping traits</li>
+            <li class="success">It provides backed enum value and option traits</li>
+            <li class="success">It provides a default class based label trait</li>
+            <li class="success">It provides comparable helpers</li>
+            <li class="success">It provides a default description trait</li>
+        </ul>
+        <h2>Has Transitions (FastForward\Enum\Tests\StateMachine\HasTransitions)</h2>
+        <ul>
+            <li class="success">It supports state machine style transitions</li>
+            <li class="success">It throws for invalid state machine transitions</li>
+        </ul>
+        <h2>Sort Direction (FastForward\Enum\Tests\Sort\SortDirection)</h2>
+        <ul>
+            <li class="success">It provides enum helpers for sort direction</li>
+            <li class="success">It provides sort specific helpers</li>
+            <li class="success">It provides nulls position helpers</li>
+            <li class="success">It provides case sensitivity helpers</li>
+        </ul>
+    </body>
+</html>
