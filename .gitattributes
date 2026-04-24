@@ -8,5 +8,6 @@
 /.gitignore            export-ignore
 /.gitmodules           export-ignore
 /.phpunit.result.cache export-ignore
+/AGENTS.md             export-ignore
 /phpunit.xml.dist      export-ignore
 /README.md             export-ignore

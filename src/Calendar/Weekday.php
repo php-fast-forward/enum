@@ -16,7 +16,7 @@ declare(strict_types=1);
  * @see       https://datatracker.ietf.org/doc/html/rfc2119
  */
 
-namespace FastForward\Enum\Common;
+namespace FastForward\Enum\Calendar;
 
 use FastForward\Enum\DescribedEnumInterface;
 use FastForward\Enum\LabeledEnumInterface;

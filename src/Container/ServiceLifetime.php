@@ -16,7 +16,7 @@ declare(strict_types=1);
  * @see       https://datatracker.ietf.org/doc/html/rfc2119
  */
 
-namespace FastForward\Enum\Common;
+namespace FastForward\Enum\Container;
 
 use FastForward\Enum\DescribedEnumInterface;
 use FastForward\Enum\LabeledEnumInterface;
@@ -29,7 +29,7 @@ use FastForward\Enum\Trait\HasOptions;
 use FastForward\Enum\Trait\HasValueMap;
 use FastForward\Enum\Trait\HasValues;
 
-enum Environment: string implements DescribedEnumInterface, LabeledEnumInterface
+enum ServiceLifetime: string implements DescribedEnumInterface, LabeledEnumInterface
 {
     use Comparable;
     use HasLabel;
@@ -40,33 +40,19 @@ enum Environment: string implements DescribedEnumInterface, LabeledEnumInterface
     use HasValueMap;
     use HasValues;
 
-    case Development = 'development';
-    case Testing = 'testing';
-    case Staging = 'staging';
-    case Production = 'production';
+    case Singleton = 'singleton';
+    case Transient = 'transient';
 
     public function description(): string
     {
         return match ($this) {
-            self::Development => 'Local development environment with fast feedback and debugging enabled.',
-            self::Testing => 'Automated test environment intended for repeatable checks and validation.',
-            self::Staging => 'Pre-production environment used to verify releases before going live.',
-            self::Production => 'Live environment serving real users and production workloads.',
+            self::Singleton => 'One shared instance is reused for the full container lifetime.',
+            self::Transient => 'A new instance is created for each resolution.',
         };
     }
 
-    public function isProduction(): bool
+    public function isReusable(): bool
     {
-        return self::Production === $this;
-    }
-
-    public function isPreProduction(): bool
-    {
-        return $this->in([self::Development, self::Testing, self::Staging]);
-    }
-
-    public function isDebugFriendly(): bool
-    {
-        return $this->in([self::Development, self::Testing]);
+        return $this->is(self::Singleton);
     }
 }

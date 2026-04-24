@@ -1,32 +1,41 @@
 # Fast Forward Enum
 
-[![PHP Version](https://img.shields.io/badge/php-%5E8.3-blue.svg)](https://www.php.net/releases/)
-[![License](https://img.shields.io/github/license/php-fast-forward/enum)](LICENSE)
+Ergonomic utilities and reusable catalogs for PHP enums, including names, values, lookups, maps,
+sorting helpers, and enum-driven workflows.
 
-Ergonomic utilities for PHP enums with a small, framework-agnostic API. The package focuses on the
-pieces the engine does not provide out of the box yet, such as `values()`, name lookups, and ready
-to use option maps.
+[![PHP Version](https://img.shields.io/badge/php-^8.3-777BB4?logo=php&logoColor=white)](https://www.php.net/releases/)
+[![Composer Package](https://img.shields.io/badge/composer-fast--forward%2Fenum-F28D1A.svg?logo=composer&logoColor=white)](https://packagist.org/packages/fast-forward/enum)
+[![Tests](https://img.shields.io/github/actions/workflow/status/php-fast-forward/enum/tests.yml?logo=githubactions&logoColor=white&label=tests&color=22C55E)](https://github.com/php-fast-forward/enum/actions/workflows/tests.yml)
+[![Coverage](https://img.shields.io/badge/coverage-phpunit-4ADE80?logo=php&logoColor=white)](https://php-fast-forward.github.io/enum/coverage/index.html)
+[![Docs](https://img.shields.io/github/deployments/php-fast-forward/enum/github-pages?logo=readthedocs&logoColor=white&label=docs&labelColor=1E293B&color=38BDF8&style=flat)](https://php-fast-forward.github.io/enum/index.html)
+[![License](https://img.shields.io/github/license/php-fast-forward/enum?color=64748B)](LICENSE)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/php-fast-forward?logo=githubsponsors&logoColor=white&color=EC4899)](https://github.com/sponsors/php-fast-forward)
 
-## Features
+![Fast Forward Enum mascot banner](docs/_static/enum-mascot-banner.png)
 
-- `Trait\HasValues` for backed enums
-- `Trait\HasNames` for any enum
-- `Trait\HasNameLookup` with `fromName()`, `tryFromName()`, and `hasName()`
-- `Trait\HasOptions`, `Trait\HasNameMap`, and `Trait\HasValueMap` for common integration scenarios
-- `Trait\Comparable` for case comparisons and membership checks
-- `Trait\HasDescription` for readable descriptions based on the case name
-- `StateMachine\HasTransitions` for explicit enum-based workflow transitions
-- Ready-to-use enums in `Common\`, including `Environment`, `Priority`, `Severity`, `Weekday`, and `Month`
-- Static helper methods through [`Helper\EnumHelper`](src/Helper/EnumHelper.php)
-- Optional [`LabeledEnumInterface`](src/LabeledEnumInterface.php) for labels without framework lock-in
+## ✨ Features
 
-## Installation
+- 🧩 Traits for `values()`, `names()`, options, maps, lookups, and enum comparisons
+- 🧭 `Helper\EnumHelper` for generic operations over `UnitEnum` and `BackedEnum`
+- 🔄 Reversible sort-oriented enums such as `SortDirection`, `NullsPosition`, and `ComparisonResult`
+- 🗂 Reusable catalogs grouped by domain, including `Calendar`, `Logger`, `Runtime`, and `DateTime`
+- 🚦 Enum-based workflow transitions through `StateMachine\HasTransitions`
+- 🏷 Optional `LabeledEnumInterface` and readable descriptions without framework lock-in
+- 🧼 Small public API with explicit namespaces and no `Contracts` bucket
+
+## 📦 Installation
 
 ```bash
 composer require fast-forward/enum
 ```
 
-## Usage
+Requirements:
+
+- PHP `^8.3`
+
+## 🛠️ Usage
+
+Basic enum ergonomics:
 
 ```php
 <?php
@@ -64,9 +73,35 @@ Status::Draft->description(); // 'Draft'
 EnumHelper::valueMap(Status::class); // ['draft' => Status::Draft, 'published' => Status::Published]
 ```
 
-## State Machines
+Labels and label maps:
 
-For workflow-like enums, use [`StateMachine\HasTransitions`](src/StateMachine/HasTransitions.php).
+```php
+<?php
+
+declare(strict_types=1);
+
+use FastForward\Enum\Helper\EnumHelper;
+use FastForward\Enum\LabeledEnumInterface;
+
+enum Priority: int implements LabeledEnumInterface
+{
+    case Low = 1;
+    case High = 2;
+
+    public function label(): string
+    {
+        return match ($this) {
+            self::Low => 'Low priority',
+            self::High => 'High priority',
+        };
+    }
+}
+
+EnumHelper::labels(Priority::class); // ['Low priority', 'High priority']
+EnumHelper::labelMap(Priority::class); // ['Low' => 'Low priority', 'High' => 'High priority']
+```
+
+Enum-driven workflows:
 
 ```php
 <?php
@@ -112,69 +147,163 @@ try {
 }
 ```
 
-## Labels
-
-If your enum exposes a presentation label, implement [`LabeledEnumInterface`](src/LabeledEnumInterface.php).
+Packaged enum catalogs:
 
 ```php
 <?php
 
 declare(strict_types=1);
 
-use FastForward\Enum\Helper\EnumHelper;
-use FastForward\Enum\LabeledEnumInterface;
-
-enum Priority: int implements LabeledEnumInterface
-{
-    case Low = 1;
-    case High = 2;
-
-    public function label(): string
-    {
-        return match ($this) {
-            self::Low => 'Low priority',
-            self::High => 'High priority',
-        };
-    }
-}
-
-EnumHelper::labels(Priority::class); // ['Low priority', 'High priority']
-EnumHelper::labelMap(Priority::class); // ['Low' => 'Low priority', 'High' => 'High priority']
-```
-
-## Common Enums
-
-The package also ships with a few reusable enums for cross-project concerns.
-
-```php
-<?php
-
-declare(strict_types=1);
-
-use FastForward\Enum\Common\Environment;
-use FastForward\Enum\Common\Month;
+use FastForward\Enum\Calendar\Month;
+use FastForward\Enum\Calendar\Quarter;
+use FastForward\Enum\Calendar\Semester;
+use FastForward\Enum\Calendar\Weekday;
 use FastForward\Enum\Common\Priority;
 use FastForward\Enum\Common\Severity;
-use FastForward\Enum\Common\Weekday;
+use FastForward\Enum\Comparison\ComparisonOperator;
+use FastForward\Enum\Container\ServiceLifetime;
+use FastForward\Enum\DateTime\IntervalUnit;
+use FastForward\Enum\Event\DispatchMode;
+use FastForward\Enum\Http\Scheme;
+use FastForward\Enum\Logger\LogLevel;
+use FastForward\Enum\Outcome\Result;
+use FastForward\Enum\Pipeline\FailureMode;
+use FastForward\Enum\Process\SignalBehavior;
+use FastForward\Enum\Runtime\Environment;
+use FastForward\Enum\Sort\CaseSensitivity;
+use FastForward\Enum\Sort\ComparisonResult;
+use FastForward\Enum\Sort\NullsPosition;
+use FastForward\Enum\Sort\SortDirection;
 
 Environment::Production->isProduction(); // true
-Environment::Testing->isDebugFriendly(); // true
-
 Priority::Critical->isHigherThan(Priority::Normal); // true
-Priority::ordered(); // [Low, Normal, High, Critical]
-
 Severity::Error->isAtLeast(Severity::Warning); // true
+LogLevel::Critical->isAtLeast(LogLevel::Warning); // true
+Result::Partial->isSuccessful(); // true
+ComparisonOperator::In->compare('draft', ['draft', 'published']); // true
+IntervalUnit::Hour->seconds(2); // 7200
+DispatchMode::Async->isAsync(); // true
+ServiceLifetime::Singleton->isReusable(); // true
+FailureMode::StopOnFailure->stopsOnFailure(); // true
+Scheme::Https->defaultPort(); // 443
+SignalBehavior::Handle->isTerminalControl(); // true
 Weekday::Saturday->isWeekend(); // true
 Month::December->quarter(); // 4
+Quarter::Q2->months(); // [April, May, June]
+Semester::H2->quarters(); // [Q3, Q4]
+SortDirection::Descending->reverse(); // SortDirection::Ascending
+NullsPosition::Last->compareNullability(null, 'value'); // 1
+CaseSensitivity::Insensitive->equals('Draft', 'draft'); // true
+ComparisonResult::fromComparisonResult(-1); // ComparisonResult::RightGreater
 ```
 
-## Design Notes
+## 🧰 API Summary
 
-- No `Contracts` bucket. The optional interface lives in the root namespace with the rest of the public API.
-- No framework dependency.
-- No attribute or reflection-heavy abstractions in v1.
-- `fromName()` mirrors the engine style and throws `ValueError` for invalid case names.
+| API | Description |
+| --- | --- |
+| `Helper\EnumHelper` | Static helpers for cases, names, values, labels, maps, and lookups |
+| `Trait\HasValues` | Adds `values()` to backed enums |
+| `Trait\HasNames` | Adds `names()` to any enum |
+| `Trait\HasNameLookup` | Adds `fromName()`, `tryFromName()`, and `hasName()` |
+| `Trait\HasOptions` | Builds option arrays keyed by case name |
+| `Trait\HasNameMap` / `Trait\HasValueMap` | Builds lookup maps for names and backed values |
+| `Trait\Comparable` | Adds `is()`, `isNot()`, `in()`, and `notIn()` |
+| `Trait\HasDescription` | Generates readable descriptions from case names |
+| `ReversibleInterface` | Common contract for enums exposing `reverse()` |
+| `StateMachine\HasTransitions` | Adds transition, terminal, and initial-state behavior to workflow enums |
 
-## License
+## 🔌 Integration
+
+`fast-forward/enum` is framework-agnostic and works well in:
+
+- form and UI option generation
+- DTO, request, and serializer layers
+- validation and name/value normalization
+- internal workflow modeling with enum transitions
+- logging, sorting, date/time, and runtime catalogs shared across Fast Forward packages
+
+It does not require a container, framework bridge, or reflection-heavy metadata system.
+
+## 📁 Directory Structure Example
+
+```text
+src/
+├── Calendar/
+├── Common/
+├── Comparison/
+├── Container/
+├── DateTime/
+├── Event/
+├── Helper/
+├── Http/
+├── Logger/
+├── Outcome/
+├── Pipeline/
+├── Process/
+├── Runtime/
+├── Sort/
+├── StateMachine/
+└── Trait/
+tests/
+├── Common/
+├── Helper/
+├── Sort/
+├── StateMachine/
+├── Support/
+└── Trait/
+docs/
+├── getting-started/
+├── usage/
+├── api/
+└── advanced/
+```
+
+## ⚙️ Advanced & Customization
+
+- Implement `LabeledEnumInterface` when you need explicit presentation labels.
+- Use your own domain enums when semantics are business-specific rather than generic.
+- Combine `Comparable`, lookup traits, and `HasTransitions` to build compact workflow models.
+- Prefer the packaged catalogs only when the semantics are stable and cross-project.
+
+## 🛠️ Versioning & Breaking Changes
+
+The current development line tracks `1.x-dev`. There is no published breaking-change history yet for
+this package.
+
+## ❓ FAQ
+
+**Q: Why does this package expose traits instead of one giant helper class?**  
+Traits let enums opt into only the ergonomics they need while keeping the public surface explicit.
+
+**Q: Why is there no `Contracts` namespace?**  
+Public interfaces stay in the root namespace so the package does not hide core API behind a generic
+bucket.
+
+**Q: Is `ComparisonResult` a PHP polyfill?**  
+No. It is a Fast Forward enum for comparator-style semantics, not a promise of native compatibility.
+
+## 🛡 License
 
 MIT © 2026 [Felipe Sayão Lobato Abreu](https://github.com/mentordosnerds)
+
+## 🤝 Contributing
+
+Issues, pull requests, and documentation improvements are welcome.
+
+- Read [AGENTS.md](AGENTS.md) for repository-specific guidance
+- Run `composer dump-autoload`
+- Run `./vendor/bin/dev-tools tests`
+- Update the [README](README.md) and relevant docs when changing public API
+
+## 🔗 Links
+
+- [Repository](https://github.com/php-fast-forward/enum)
+- [Packagist](https://packagist.org/packages/fast-forward/enum)
+- [Documentation site](https://php-fast-forward.github.io/enum/index.html)
+- [Sphinx docs source](docs/index.rst)
+- [Wiki](https://github.com/php-fast-forward/enum/wiki)
+- [Issue tracker](https://github.com/php-fast-forward/enum/issues)
+- [Coverage report](https://php-fast-forward.github.io/enum/coverage/index.html)
+- [Tests workflow](https://github.com/php-fast-forward/enum/actions/workflows/tests.yml)
+- [MIT License](LICENSE)
+- [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119)

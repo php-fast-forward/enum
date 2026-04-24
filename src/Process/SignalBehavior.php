@@ -16,22 +16,23 @@ declare(strict_types=1);
  * @see       https://datatracker.ietf.org/doc/html/rfc2119
  */
 
-namespace FastForward\Enum\Tests\Fixture;
+namespace FastForward\Enum\Process;
 
 use FastForward\Enum\DescribedEnumInterface;
+use FastForward\Enum\LabeledEnumInterface;
+use FastForward\Enum\Trait\Comparable;
+use FastForward\Enum\Trait\HasLabel;
 use FastForward\Enum\Trait\HasNameLookup;
 use FastForward\Enum\Trait\HasNameMap;
 use FastForward\Enum\Trait\HasNames;
 use FastForward\Enum\Trait\HasOptions;
 use FastForward\Enum\Trait\HasValueMap;
 use FastForward\Enum\Trait\HasValues;
-use FastForward\Enum\Trait\Comparable;
-use FastForward\Enum\Trait\HasDescription;
 
-enum Status: string implements DescribedEnumInterface
+enum SignalBehavior: string implements DescribedEnumInterface, LabeledEnumInterface
 {
     use Comparable;
-    use HasDescription;
+    use HasLabel;
     use HasNameLookup;
     use HasNameMap;
     use HasNames;
@@ -39,6 +40,21 @@ enum Status: string implements DescribedEnumInterface
     use HasValueMap;
     use HasValues;
 
-    case Draft = 'draft';
-    case Published = 'published';
+    case Ignore = 'ignore';
+    case Handle = 'handle';
+    case Propagate = 'propagate';
+
+    public function description(): string
+    {
+        return match ($this) {
+            self::Ignore => 'Signal is observed but intentionally ignored.',
+            self::Handle => 'Signal is intercepted and processed locally.',
+            self::Propagate => 'Signal is forwarded to child processes or outer handlers.',
+        };
+    }
+
+    public function isTerminalControl(): bool
+    {
+        return $this->in([self::Handle, self::Propagate]);
+    }
 }

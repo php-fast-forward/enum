@@ -16,7 +16,7 @@ declare(strict_types=1);
  * @see       https://datatracker.ietf.org/doc/html/rfc2119
  */
 
-namespace FastForward\Enum\Tests\Fixture;
+namespace FastForward\Enum\Tests\Support;
 
 use FastForward\Enum\StateMachine\HasTransitions;
 use FastForward\Enum\Trait\Comparable;
