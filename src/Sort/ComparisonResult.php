@@ -34,7 +34,7 @@ enum ComparisonResult implements ReversibleInterface
     case LeftGreater;
     case RightGreater;
     case Equal;
-    case Uncomparable;
+    case Incomparable;
 
     /**
      * @param int $result
@@ -60,7 +60,7 @@ enum ComparisonResult implements ReversibleInterface
             self::RightGreater => -1,
             self::Equal => 0,
             // Mirrors PHP's legacy comparator fallback for values that are not logically comparable.
-            self::Uncomparable => 1,
+            self::Incomparable => 1,
         };
     }
 
@@ -81,6 +81,6 @@ enum ComparisonResult implements ReversibleInterface
      */
     public function isComparable(): bool
     {
-        return ! $this->is(self::Uncomparable);
+        return ! $this->is(self::Incomparable);
     }
 }

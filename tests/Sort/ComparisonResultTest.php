@@ -36,9 +36,9 @@ final class ComparisonResultTest extends TestCase
     #[Test]
     public function itProvidesNamesAndNameLookupHelpers(): void
     {
-        self::assertSame(['LeftGreater', 'RightGreater', 'Equal', 'Uncomparable'], ComparisonResult::names());
+        self::assertSame(['LeftGreater', 'RightGreater', 'Equal', 'Incomparable'], ComparisonResult::names());
         self::assertSame(ComparisonResult::Equal, ComparisonResult::fromName('Equal'));
-        self::assertSame(ComparisonResult::Uncomparable, ComparisonResult::tryFromName('Uncomparable'));
+        self::assertSame(ComparisonResult::Incomparable, ComparisonResult::tryFromName('Incomparable'));
         self::assertTrue(ComparisonResult::hasName('LeftGreater'));
         self::assertFalse(ComparisonResult::hasName('Ascending'));
     }
@@ -64,7 +64,7 @@ final class ComparisonResultTest extends TestCase
         self::assertSame(1, ComparisonResult::LeftGreater->toComparisonResult());
         self::assertSame(-1, ComparisonResult::RightGreater->toComparisonResult());
         self::assertSame(0, ComparisonResult::Equal->toComparisonResult());
-        self::assertSame(1, ComparisonResult::Uncomparable->toComparisonResult());
+        self::assertSame(1, ComparisonResult::Incomparable->toComparisonResult());
     }
 
     /**
@@ -76,9 +76,9 @@ final class ComparisonResultTest extends TestCase
         self::assertSame(ComparisonResult::RightGreater, ComparisonResult::LeftGreater->reverse());
         self::assertSame(ComparisonResult::LeftGreater, ComparisonResult::RightGreater->reverse());
         self::assertSame(ComparisonResult::Equal, ComparisonResult::Equal->reverse());
-        self::assertSame(ComparisonResult::Uncomparable, ComparisonResult::Uncomparable->reverse());
+        self::assertSame(ComparisonResult::Incomparable, ComparisonResult::Incomparable->reverse());
         self::assertInstanceOf(ReversibleInterface::class, ComparisonResult::LeftGreater);
         self::assertTrue(ComparisonResult::Equal->isComparable());
-        self::assertFalse(ComparisonResult::Uncomparable->isComparable());
+        self::assertFalse(ComparisonResult::Incomparable->isComparable());
     }
 }
