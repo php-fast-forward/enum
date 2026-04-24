@@ -981,10 +981,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/FastForward-Enum-Sort-ComparisonResult.html#enumcase_Equal"
         },                {
-            "fqsen": "\\FastForward\\Enum\\Sort\\ComparisonResult\u003A\u003AUncomparable",
-            "name": "Uncomparable",
+            "fqsen": "\\FastForward\\Enum\\Sort\\ComparisonResult\u003A\u003AIncomparable",
+            "name": "Incomparable",
             "summary": "",
-            "url": "classes/FastForward-Enum-Sort-ComparisonResult.html#enumcase_Uncomparable"
+            "url": "classes/FastForward-Enum-Sort-ComparisonResult.html#enumcase_Incomparable"
         },                {
             "fqsen": "\\FastForward\\Enum\\Sort\\NullsPosition",
             "name": "NullsPosition",
