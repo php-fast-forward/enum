@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+            <title>fast-forward/enum</title>
+    
+
+        
+    
+        
+                                                    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+
+            <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        
+        <!-- Google Fonts -->
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+
+        <link rel="stylesheet" href="css/base.css">
+    </head>
+<body>
+    <div id="main-wrapper">
+        <header id="header" class="sticky-top">
+    <nav class="navbar bg-primary navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-bg-primary" href="" title="fast-forward/enum">fast-forward/enum</a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" aria-controls="header-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="header-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <nav aria-label="Top navigation">
+    <ul class="navbar-nav flex-row flex-wrap align-items-center gap-2">
+            </ul>
+</nav>                </ul>
+
+                <div class="navbar-nav ms-lg-3">
+                    <li class="nav-item ml-lg-auto">
+    <section data-search-form class="phpdocumentor-search">
+        <div class="input-group">
+            <span class="input-group-text bg-body border-end-0">
+                <i class="fas fa-search text-primary"></i>
+            </span>
+
+            <input
+                type="search"
+                class="form-control border-start-0"
+                placeholder="Search..."
+                autocomplete="off"
+            >
+
+            <button
+                class="btn btn-secondary"
+                type="button"
+                aria-label="Clear search"
+                data-search-clear
+            >
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </section>
+</li>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <div id="content" role="main" class="container-fluid">
+            <div class="row min-vh-100">
+                <aside class="col-12 col-lg-3 col-xl-2 px-0 position-sticky top-0 vh-100 overflow-auto">
+                    <div class="navigation h-100">
+                        <nav class="py-4">
+    <ul class="list-unstyled mb-0">
+                                    <li class="mb-4">
+                    <div class="d-flex align-items-center gap-2 text-uppercase fw-semibold small text-body-secondary px-3 mb-2">
+                        <i class="fas fa-book text-primary"></i>
+                        <span>Fast-Forward-Enum</span>
+                    </div>
+
+                    <ul class="nav nav-pills flex-column">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./getting-started/index.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            Getting Started
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-getting-started-index-html"
+                aria-expanded="false"
+                aria-controls="sidebar-getting-started-index-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-getting-started-index-html" class="collapse">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./getting-started/installation.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Installation
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./getting-started/quickstart.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Quickstart
+        </a>
+
+            </div>
+
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/index.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            Usage
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-usage-index-html"
+                aria-expanded="true"
+                aria-controls="sidebar-usage-index-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-usage-index-html" class="collapse show">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/working-with-enums.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Working with Enums
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/helper-methods.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Helper Methods
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/use-cases.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Use Cases
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/traits.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Traits
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/catalogs.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 active small"
+        >
+            Enum Catalogs
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/state-machines.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            State Machines
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./usage/sort.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Sort Helpers
+        </a>
+
+            </div>
+
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./api/index.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            API Reference
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-api-index-html"
+                aria-expanded="false"
+                aria-controls="sidebar-api-index-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-api-index-html" class="collapse">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./api/helper.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Helper
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./api/traits.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Traits API
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./api/contracts.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Interfaces
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./api/packaged-enums.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Packaged Enums
+        </a>
+
+            </div>
+
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./advanced/index.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            Advanced Topics
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-advanced-index-html"
+                aria-expanded="false"
+                aria-controls="sidebar-advanced-index-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-advanced-index-html" class="collapse">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./advanced/design.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Design Notes
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./advanced/integration.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Integration
+        </a>
+
+            </div>
+
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./links/index.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            Links
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-links-index-html"
+                aria-expanded="false"
+                aria-controls="sidebar-links-index-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-links-index-html" class="collapse">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./links/dependencies.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Dependencies
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./links/coverage.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Coverage and Reports
+        </a>
+
+            </div>
+
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./faq.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            FAQ
+        </a>
+
+            </div>
+
+    </li>
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="./compatibility.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            Compatibility
+        </a>
+
+            </div>
+
+    </li>
+                                            </ul>
+                </li>
+                            <li class="mb-4">
+                    <div class="d-flex align-items-center gap-2 text-uppercase fw-semibold small text-body-secondary px-3 mb-2">
+                        <i class="fas fa-book text-primary"></i>
+                        <span>Namespaces</span>
+                    </div>
+
+                    <ul class="nav nav-pills flex-column">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            FastForward
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-namespaces-fastforward-html"
+                aria-expanded="false"
+                aria-controls="sidebar-namespaces-fastforward-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-namespaces-fastforward-html" class="collapse">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Enum
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-namespaces-fastforward-enum-html"
+                aria-expanded="false"
+                aria-controls="sidebar-namespaces-fastforward-enum-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-namespaces-fastforward-enum-html" class="collapse">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-calendar.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Calendar
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-common.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Common
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-comparison.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Comparison
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-container.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Container
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-datetime.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            DateTime
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-event.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Event
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-helper.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Helper
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-http.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Http
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-logger.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Logger
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-outcome.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Outcome
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-pipeline.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Pipeline
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-process.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Process
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-runtime.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Runtime
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-sort.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Sort
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-statemachine.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            StateMachine
+        </a>
+
+            </div>
+
+    </li>
+                            <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="namespaces/fastforward-enum-trait.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Trait
+        </a>
+
+            </div>
+
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                                            </ul>
+                </li>
+                            <li class="mb-4">
+                    <div class="d-flex align-items-center gap-2 text-uppercase fw-semibold small text-body-secondary px-3 mb-2">
+                        <i class="fas fa-book text-primary"></i>
+                        <span>Packages</span>
+                    </div>
+
+                    <ul class="nav nav-pills flex-column">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="packages/FastForward.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis"
+        >
+            FastForward
+        </a>
+
+                    <button
+                class="btn btn-sm border-0 bg-transparent text-body-secondary px-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar-packages-FastForward-html"
+                aria-expanded="false"
+                aria-controls="sidebar-packages-FastForward-html"
+            >
+                <i class="fas fa-chevron-down small"></i>
+            </button>
+            </div>
+
+            <div id="sidebar-packages-FastForward-html" class="collapse">
+            <ul class="nav flex-column ms-3 ps-3 border-start gap-1">
+                                                    <li class="nav-item">
+    
+    
+    
+    
+    
+    
+            
+    
+    
+        
+    <div class="d-flex align-items-center">
+        <a
+            href="packages/FastForward-Enum.html"
+            class="nav-link flex-grow-1 px-3 py-1 rounded-2 link-body-emphasis small"
+        >
+            Enum
+        </a>
+
+            </div>
+
+    </li>
+                        
+            </ul>
+        </div>
+    </li>
+                                            </ul>
+                </li>
+                    
+        <li class="mb-4">
+            <div class="d-flex align-items-center gap-2 text-uppercase fw-semibold small text-body-secondary px-3 mb-2">
+                <i class="fas fa-chart-line text-success"></i>
+                <span>Reports</span>
+            </div>
+
+            <ul class="nav nav-pills flex-column">
+                                <li class="nav-item">
+                    <a class="nav-link link-body-emphasis d-flex align-items-center gap-2" href="reports/deprecated.html">
+                        <i class="fas fa-exclamation-triangle text-warning"></i>
+                        <span>Deprecated</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-body-emphasis d-flex align-items-center gap-2" href="reports/errors.html">
+                        <i class="fas fa-bug text-danger"></i>
+                        <span>Errors</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-body-emphasis d-flex align-items-center gap-2" href="reports/markers.html">
+                        <i class="fas fa-bookmark text-info"></i>
+                        <span>Markers</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="mb-4">
+            <div class="d-flex align-items-center gap-2 text-uppercase fw-semibold small text-body-secondary px-3 mb-2">
+                <i class="fas fa-folder-open text-warning"></i>
+                <span>Indices</span>
+            </div>
+
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a class="nav-link link-body-emphasis d-flex align-items-center gap-2" href="indices/files.html">
+                        <i class="fas fa-file-code text-secondary"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+                    </div>
+                </aside>
+
+                <div class="col-12 col-lg-9 col-xl-10">
+                    <div class="py-4 py-xl-5">
+                        <div class="container-fluid">
+                            
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="bg-body rounded-4 border p-4 p-xl-5 shadow-sm">
+                                            <section class="section " id="enum-catalogs">
+            <h1>Enum Catalogs</h1>
+
+            
+    <p>The package ships with ready-to-use enums for recurring concerns. These are not
+meant to replace every enum in an application. They exist for cases where the
+semantics are already broad, stable, and reusable across projects.</p>
+
+            <section class="section " id="examples-by-namespace">
+            <h2>Examples by namespace</h2>
+
+            
+
+<ul>
+    <li class="dash"><code>Calendar</code>
+: <code>Month</code>
+, <code>Quarter</code>
+, <code>Semester</code>
+, <code>Weekday</code>
+</li>
+
+    <li class="dash"><code>Sort</code>
+: <code>SortDirection</code>
+, <code>NullsPosition</code>
+, <code>CaseSensitivity</code>
+, <code>ComparisonResult</code>
+</li>
+
+    <li class="dash"><code>Logger</code>
+: <code>LogLevel</code>
+</li>
+
+    <li class="dash"><code>Runtime</code>
+: <code>Environment</code>
+</li>
+
+    <li class="dash"><code>DateTime</code>
+: <code>IntervalUnit</code>
+</li>
+
+    <li class="dash"><code>Comparison</code>
+: <code>ComparisonOperator</code>
+</li>
+
+    <li class="dash"><code>Outcome</code>
+: <code>Result</code>
+</li>
+
+    <li class="dash"><code>Http</code>
+: <code>Scheme</code>
+</li>
+
+    <li class="dash"><code>Process</code>
+: <code>SignalBehavior</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="what-users-usually-want-to-know-first">
+            <h2>What users usually want to know first</h2>
+
+            
+    <p>Most first-time users ask two questions when they reach the packaged enums:</p>
+
+            
+    
+<ol start="1" type="1">
+    <li value="1">&quot;When should I use one of these instead of defining my own enum?&quot;</li>
+
+    <li value="2">&quot;What useful behavior do I get besides the cases themselves?&quot;</li>
+
+</ol>
+
+            
+    <p>The short answer is:</p>
+
+            
+
+<ul>
+    <li class="dash">use a packaged enum when the name and semantics already match your problem</li>
+
+    <li class="dash">expect each packaged enum to expose a few focused methods, not just raw cases</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="examples-with-practical-behavior">
+            <h2>Examples with practical behavior</h2>
+
+            <section class="section " id="runtime-environment">
+            <h3><code>Runtime\\Environment</code>
+</h3>
+
+            
+    <p>Use this when your code needs to distinguish between development, testing,
+staging, and production.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>isProduction()</code>
+</li>
+
+    <li class="dash"><code>isPreProduction()</code>
+</li>
+
+    <li class="dash"><code>isDebugFriendly()</code>
+</li>
+
+    <li class="dash">inherited helper-style behavior such as <code>names()</code>
+, <code>values()</code>
+, and <code>fromName()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="calendar-month-and-calendar-quarter">
+            <h3><code>Calendar\\Month</code>
+ and <code>Calendar\\Quarter</code>
+</h3>
+
+            
+    <p>Use these when you want typed calendar logic instead of repeating integer math.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>Month::quarter()</code>
+</li>
+
+    <li class="dash"><code>Month::isQuarterEnd()</code>
+</li>
+
+    <li class="dash"><code>Month::ordered()</code>
+</li>
+
+    <li class="dash"><code>Quarter::months()</code>
+</li>
+
+    <li class="dash"><code>Quarter::startMonth()</code>
+</li>
+
+    <li class="dash"><code>Quarter::endMonth()</code>
+</li>
+
+    <li class="dash"><code>Quarter::includes()</code>
+</li>
+
+    <li class="dash"><code>Quarter::fromMonth()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="calendar-semester-and-calendar-weekday">
+            <h3><code>Calendar\\Semester</code>
+ and <code>Calendar\\Weekday</code>
+</h3>
+
+            
+    <p>Use these when reports, schedules, or recurring jobs need names that are more
+explicit than raw integers.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>Semester::months()</code>
+</li>
+
+    <li class="dash"><code>Semester::includes()</code>
+</li>
+
+    <li class="dash"><code>Semester::fromMonth()</code>
+</li>
+
+    <li class="dash"><code>Weekday::isWeekend()</code>
+</li>
+
+    <li class="dash"><code>Weekday::isWeekday()</code>
+</li>
+
+    <li class="dash"><code>Weekday::ordered()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="datetime-intervalunit">
+            <h3><code>DateTime\\IntervalUnit</code>
+</h3>
+
+            
+    <p>Use this when you need named interval units for cache policies, schedules,
+retry logic, or reporting windows.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>shortLabel()</code>
+</li>
+
+    <li class="dash"><code>seconds()</code>
+</li>
+
+    <li class="dash"><code>isCalendarAware()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="logger-loglevel-and-common-severity">
+            <h3><code>Logger\\LogLevel</code>
+ and <code>Common\\Severity</code>
+</h3>
+
+            
+    <p>Use these when you need reusable severity ordering in logs, alerts, or
+operational rules.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>weight()</code>
+</li>
+
+    <li class="dash"><code>isAtLeast()</code>
+</li>
+
+    <li class="dash"><code>ordered()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="sort-sortdirection-and-friends">
+            <h3><code>Sort\\SortDirection</code>
+ and friends</h3>
+
+            
+    <p>Use these when sorting behavior would otherwise rely on magic values or loose
+booleans.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>SortDirection::reverse()</code>
+</li>
+
+    <li class="dash"><code>SortDirection::applyToComparisonResult()</code>
+</li>
+
+    <li class="dash"><code>NullsPosition::compareNullability()</code>
+</li>
+
+    <li class="dash"><code>CaseSensitivity::normalize()</code>
+</li>
+
+    <li class="dash"><code>CaseSensitivity::equals()</code>
+</li>
+
+    <li class="dash"><code>ComparisonResult::fromComparisonResult()</code>
+</li>
+
+    <li class="dash"><code>ComparisonResult::toComparisonResult()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="comparison-comparisonoperator">
+            <h3><code>Comparison\\ComparisonOperator</code>
+</h3>
+
+            
+    <p>Use this when building filters, query abstractions, or rule systems that need
+typed operators.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>symbol()</code>
+</li>
+
+    <li class="dash"><code>isSetOperator()</code>
+</li>
+
+    <li class="dash"><code>compare()</code>
+</li>
+
+    <li class="dash"><code>negate()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="common-priority">
+            <h3><code>Common\\Priority</code>
+</h3>
+
+            
+    <p>Use this when work queues, support tickets, alerts, or retry policies need a
+small reusable priority vocabulary.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>weight()</code>
+</li>
+
+    <li class="dash"><code>isHigherThan()</code>
+</li>
+
+    <li class="dash"><code>isLowerThan()</code>
+</li>
+
+    <li class="dash"><code>ordered()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="http-scheme">
+            <h3><code>Http\\Scheme</code>
+</h3>
+
+            
+    <p>Use this when URLs or transport policies should distinguish <code>http</code>
+ and
+<code>https</code>
+ without string checks.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>isSecure()</code>
+</li>
+
+    <li class="dash">inherited enum helper behavior such as <code>values()</code>
+ and <code>fromName()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="process-signalbehavior">
+            <h3><code>Process\\SignalBehavior</code>
+</h3>
+
+            
+    <p>Use this when process runners or worker loops need to describe what should
+happen after a signal.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>isTerminalControl()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="event-dispatchmode">
+            <h3><code>Event\\DispatchMode</code>
+</h3>
+
+            
+    <p>Use this when an event dispatcher, message bridge, or outbox integration needs
+to carry whether work is expected to happen now or later.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>isSync()</code>
+</li>
+
+    <li class="dash"><code>isAsync()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="container-servicelifetime">
+            <h3><code>Container\\ServiceLifetime</code>
+</h3>
+
+            
+    <p>Use this when a container adapter needs a small non-PSR-specific vocabulary for
+singleton and transient services.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>isReusable()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="pipeline-failuremode">
+            <h3><code>Pipeline\\FailureMode</code>
+</h3>
+
+            
+    <p>Use this when pipeline or middleware execution needs to state whether a failure
+stops the chain or is collected while execution continues.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>stopsOnFailure()</code>
+</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="outcome-result">
+            <h3><code>Outcome\\Result</code>
+</h3>
+
+            
+    <p>Use this when your code needs a compact success/partial/failure outcome type.</p>
+
+            
+    <p>Useful methods:</p>
+
+            
+
+<ul>
+    <li class="dash"><code>isSuccessful()</code>
+</li>
+
+    <li class="dash"><code>isCompleteSuccess()</code>
+</li>
+
+    <li class="dash"><code>isFailure()</code>
+</li>
+
+</ul>
+
+    </section>
+
+    </section>
+
+            <section class="section " id="how-to-evaluate-a-packaged-enum">
+            <h2>How to evaluate a packaged enum</h2>
+
+            
+    <p>A packaged enum is usually a good fit when:</p>
+
+            
+
+<ul>
+    <li class="dash">the case names already match the language you would naturally use</li>
+
+    <li class="dash">the behavior would look strange if you had to rename every case</li>
+
+    <li class="dash">the enum would make sense in more than one package or application</li>
+
+</ul>
+
+            
+    <p>A packaged enum is usually a poor fit when:</p>
+
+            
+
+<ul>
+    <li class="dash">your business vocabulary differs from the generic names</li>
+
+    <li class="dash">labels need to be heavily customized</li>
+
+    <li class="dash">the lifecycle or transitions are domain-specific</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="new-user-guidance">
+            <h2>New-user guidance</h2>
+
+            
+    <p>Use the packaged enums when the semantics are already general and stable.</p>
+
+            
+    <p>Prefer defining your own enum when:</p>
+
+            
+
+<ul>
+    <li class="dash">the cases are domain-specific</li>
+
+    <li class="dash">the labels are business-language driven</li>
+
+    <li class="dash">the lifecycle or behavior only makes sense inside one package</li>
+
+</ul>
+
+    </section>
+
+            <section class="section " id="examples-of-strong-fits">
+            <h2>Examples of strong fits</h2>
+
+            
+
+<ul>
+    <li class="dash"><code>Runtime\\Environment</code>
+ for deployment/runtime distinctions</li>
+
+    <li class="dash"><code>Calendar\\Month</code>
+ and <code>Calendar\\Quarter</code>
+ for date-related calculations</li>
+
+    <li class="dash"><code>Sort\\SortDirection</code>
+ and <code>Sort\\NullsPosition</code>
+ for ordering behavior</li>
+
+    <li class="dash"><code>Logger\\LogLevel</code>
+ for reusable severity-style decisions</li>
+
+</ul>
+
+    </section>
+
+    </section>
+
+                                    </div>
+                                </div>
+
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+    data-search-results
+    class="position-fixed top-0 start-0 w-100 h-100 phpdocumentor-search-results--hidden"
+    style="z-index: 2000;"
+>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+    <div class="container-fluid position-relative h-100">
+        <div class="row justify-content-end">
+            <div class="col-12 col-lg-8 col-xl-6">
+                <div class="mt-5 pt-4">
+                    <div class="bg-body border rounded-4 shadow overflow-hidden">
+                        <div class="d-flex align-items-center justify-content-between px-3 py-2 border-bottom bg-body-tertiary">
+                            <div class="small text-body-secondary text-uppercase fw-semibold">
+                                Search results
+                            </div>
+
+                            <button
+                                type="button"
+                                class="btn btn-sm btn-link text-decoration-none text-body-secondary phpdocumentor-search-results__close"
+                            >
+                                <i class="fas fa-times me-1"></i>Close
+                            </button>
+                        </div>
+
+                        <ul class="list-group list-group-flush phpdocumentor-search-results__entries mb-0"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    </div>
+
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+
+            <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+        <script src="js/template.js"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </body>
+</html>
