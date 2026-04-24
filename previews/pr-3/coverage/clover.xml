@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1777069238">
+  <project timestamp="1777069238" name="Clover Coverage">
+    <package name="FastForward\Enum\Calendar">
+      <file name="/home/runner/work/enum/enum/src/Calendar/Month.php">
+        <class name="FastForward\Enum\Calendar\Month" namespace="FastForward\Enum\Calendar">
+          <metrics complexity="16" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="34" coveredelements="34"/>
+        </class>
+        <line num="59" type="method" name="description" visibility="public" complexity="13" crap="13" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="80" type="method" name="quarter" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="88" type="method" name="isQuarterEnd" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="96" type="method" name="ordered" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="106" type="stmt" count="1"/>
+        <line num="107" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="109" type="stmt" count="1"/>
+        <line num="110" type="stmt" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <metrics loc="114" ncloc="89" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="34" coveredelements="34"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Calendar/Quarter.php">
+        <class name="FastForward\Enum\Calendar\Quarter" namespace="FastForward\Enum\Calendar">
+          <metrics complexity="15" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="24" coveredelements="24"/>
+        </class>
+        <line num="51" type="method" name="description" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="64" type="method" name="months" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="77" type="method" name="startMonth" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="85" type="method" name="endMonth" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="95" type="method" name="includes" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="103" type="method" name="ordered" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="113" type="method" name="fromMonth" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="115" type="stmt" count="1"/>
+        <metrics loc="118" ncloc="80" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="24" coveredelements="24"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Calendar/Semester.php">
+        <class name="FastForward\Enum\Calendar\Semester" namespace="FastForward\Enum\Calendar">
+          <metrics complexity="16" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="32" coveredelements="32"/>
+        </class>
+        <line num="49" type="method" name="description" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="60" type="method" name="months" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="78" type="method" name="quarters" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="89" type="method" name="startMonth" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="97" type="method" name="endMonth" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="107" type="method" name="includes" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="109" type="stmt" count="1"/>
+        <line num="117" type="method" name="fromMonth" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="119" type="stmt" count="2"/>
+        <line num="127" type="method" name="fromQuarter" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <metrics loc="132" ncloc="89" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="32" coveredelements="32"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Calendar/Weekday.php">
+        <class name="FastForward\Enum\Calendar\Weekday" namespace="FastForward\Enum\Calendar">
+          <metrics complexity="11" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="24" coveredelements="24"/>
+        </class>
+        <line num="54" type="method" name="description" visibility="public" complexity="8" crap="8" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="70" type="method" name="isWeekend" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="78" type="method" name="isWeekday" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="86" type="method" name="ordered" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <metrics loc="99" ncloc="74" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="24" coveredelements="24"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Common">
+      <file name="/home/runner/work/enum/enum/src/Common/Priority.php">
+        <class name="FastForward\Enum\Common\Priority" namespace="FastForward\Enum\Common">
+          <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="15" coveredelements="15"/>
+        </class>
+        <line num="51" type="method" name="description" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="64" type="method" name="weight" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="74" type="method" name="isHigherThan" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="84" type="method" name="isLowerThan" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="92" type="method" name="ordered" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <metrics loc="97" ncloc="65" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="15" coveredelements="15"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Common/Severity.php">
+        <class name="FastForward\Enum\Common\Severity" namespace="FastForward\Enum\Common">
+          <metrics complexity="16" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="22" coveredelements="22"/>
+        </class>
+        <line num="53" type="method" name="description" visibility="public" complexity="7" crap="7" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="68" type="method" name="weight" visibility="public" complexity="7" crap="7" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="85" type="method" name="isAtLeast" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="93" type="method" name="ordered" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <metrics loc="98" ncloc="71" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="22" coveredelements="22"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Comparison">
+      <file name="/home/runner/work/enum/enum/src/Comparison/ComparisonOperator.php">
+        <class name="FastForward\Enum\Comparison\ComparisonOperator" namespace="FastForward\Enum\Comparison">
+          <metrics complexity="39" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="44" elements="50" coveredelements="50"/>
+        </class>
+        <line num="56" type="method" name="description" visibility="public" complexity="9" crap="9" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="73" type="method" name="symbol" visibility="public" complexity="9" crap="9" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="90" type="method" name="isSetOperator" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="101" type="method" name="compare" visibility="public" complexity="9" crap="9" count="3"/>
+        <line num="103" type="stmt" count="3"/>
+        <line num="104" type="stmt" count="3"/>
+        <line num="105" type="stmt" count="3"/>
+        <line num="106" type="stmt" count="3"/>
+        <line num="107" type="stmt" count="3"/>
+        <line num="108" type="stmt" count="3"/>
+        <line num="109" type="stmt" count="3"/>
+        <line num="110" type="stmt" count="2"/>
+        <line num="111" type="stmt" count="2"/>
+        <line num="112" type="stmt" count="3"/>
+        <line num="118" type="method" name="negate" visibility="public" complexity="9" crap="9" count="1"/>
+        <line num="120" type="stmt" count="1"/>
+        <line num="121" type="stmt" count="1"/>
+        <line num="122" type="stmt" count="1"/>
+        <line num="123" type="stmt" count="1"/>
+        <line num="124" type="stmt" count="1"/>
+        <line num="125" type="stmt" count="1"/>
+        <line num="126" type="stmt" count="1"/>
+        <line num="127" type="stmt" count="1"/>
+        <line num="128" type="stmt" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <line num="137" type="method" name="candidateSet" visibility="private" complexity="2" crap="2" count="2"/>
+        <line num="139" type="stmt" count="2"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="143" type="stmt" count="1"/>
+        <metrics loc="146" ncloc="110" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="44" elements="50" coveredelements="50"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Container">
+      <file name="/home/runner/work/enum/enum/src/Container/ServiceLifetime.php">
+        <class name="FastForward\Enum\Container\ServiceLifetime" namespace="FastForward\Enum\Container">
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="49" type="method" name="description" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="60" type="method" name="isReusable" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <metrics loc="65" ncloc="46" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\DateTime">
+      <file name="/home/runner/work/enum/enum/src/DateTime/IntervalUnit.php">
+        <class name="FastForward\Enum\DateTime\IntervalUnit" namespace="FastForward\Enum\DateTime">
+          <metrics complexity="25" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="32" coveredelements="32"/>
+        </class>
+        <line num="54" type="method" name="description" visibility="public" complexity="8" crap="8" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="70" type="method" name="shortLabel" visibility="public" complexity="8" crap="8" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="88" type="method" name="seconds" visibility="public" complexity="8" crap="8" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="104" type="method" name="isCalendarAware" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="106" type="stmt" count="1"/>
+        <metrics loc="109" ncloc="82" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="32" coveredelements="32"/>
+      </file>
+    </package>
+    <file name="/home/runner/work/enum/enum/src/DescribedEnumInterface.php">
+      <metrics loc="28" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="FastForward\Enum\Event">
+      <file name="/home/runner/work/enum/enum/src/Event/DispatchMode.php">
+        <class name="FastForward\Enum\Event\DispatchMode" namespace="FastForward\Enum\Event">
+          <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="9" coveredelements="9"/>
+        </class>
+        <line num="49" type="method" name="description" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="60" type="method" name="isSync" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="68" type="method" name="isAsync" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <metrics loc="73" ncloc="51" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Helper">
+      <file name="/home/runner/work/enum/enum/src/Helper/EnumHelper.php">
+        <class name="FastForward\Enum\Helper\EnumHelper" namespace="FastForward\Enum\Helper">
+          <metrics complexity="26" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="47" elements="62" coveredelements="62"/>
+        </class>
+        <line num="35" type="method" name="cases" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="49" type="method" name="names" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="63" type="method" name="values" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="77" type="method" name="nameMap" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="79" type="stmt" count="3"/>
+        <line num="80" type="stmt" count="3"/>
+        <line num="82" type="stmt" count="3"/>
+        <line num="83" type="stmt" count="3"/>
+        <line num="86" type="stmt" count="3"/>
+        <line num="96" type="method" name="valueMap" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="115" type="method" name="options" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="117" type="stmt" count="1"/>
+        <line num="118" type="stmt" count="1"/>
+        <line num="120" type="stmt" count="1"/>
+        <line num="121" type="stmt" count="1"/>
+        <line num="124" type="stmt" count="1"/>
+        <line num="133" type="method" name="hasName" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="144" type="method" name="hasValue" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="146" type="stmt" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="159" type="method" name="tryFromName" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="161" type="stmt" count="2"/>
+        <line num="172" type="method" name="fromName" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="174" type="stmt" count="2"/>
+        <line num="176" type="stmt" count="2"/>
+        <line num="177" type="stmt" count="2"/>
+        <line num="187" type="method" name="labels" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="189" type="stmt" count="2"/>
+        <line num="191" type="stmt" count="1"/>
+        <line num="201" type="method" name="labelMap" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="203" type="stmt" count="1"/>
+        <line num="204" type="stmt" count="1"/>
+        <line num="206" type="stmt" count="1"/>
+        <line num="207" type="stmt" count="1"/>
+        <line num="210" type="stmt" count="1"/>
+        <line num="220" type="method" name="unitEnumClass" visibility="private" complexity="4" crap="4" count="8"/>
+        <line num="223" type="stmt" count="8"/>
+        <line num="225" type="stmt" count="8"/>
+        <line num="226" type="stmt" count="1"/>
+        <line num="229" type="stmt" count="7"/>
+        <line num="239" type="method" name="backedEnumClass" visibility="private" complexity="4" crap="4" count="5"/>
+        <line num="242" type="stmt" count="5"/>
+        <line num="244" type="stmt" count="5"/>
+        <line num="245" type="stmt" count="1"/>
+        <line num="248" type="stmt" count="4"/>
+        <line num="258" type="method" name="labeledEnumClass" visibility="private" complexity="2" crap="2" count="2"/>
+        <line num="261" type="stmt" count="2"/>
+        <line num="263" type="stmt" count="2"/>
+        <line num="264" type="stmt" count="1"/>
+        <line num="267" type="stmt" count="1"/>
+        <metrics loc="270" ncloc="149" classes="1" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="47" elements="62" coveredelements="62"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Http">
+      <file name="/home/runner/work/enum/enum/src/Http/Scheme.php">
+        <class name="FastForward\Enum\Http\Scheme" namespace="FastForward\Enum\Http">
+          <metrics complexity="7" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="12" coveredelements="12"/>
+        </class>
+        <line num="49" type="method" name="description" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="60" type="method" name="defaultPort" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="71" type="method" name="isSecure" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <metrics loc="76" ncloc="54" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="12" coveredelements="12"/>
+      </file>
+    </package>
+    <file name="/home/runner/work/enum/enum/src/LabeledEnumInterface.php">
+      <metrics loc="28" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="FastForward\Enum\Logger">
+      <file name="/home/runner/work/enum/enum/src/Logger/LogLevel.php">
+        <class name="FastForward\Enum\Logger\LogLevel" namespace="FastForward\Enum\Logger">
+          <metrics complexity="20" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="35" coveredelements="35"/>
+        </class>
+        <line num="55" type="method" name="description" visibility="public" complexity="9" crap="9" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="72" type="method" name="weight" visibility="public" complexity="9" crap="9" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="91" type="method" name="isAtLeast" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="99" type="method" name="ordered" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="106" type="stmt" count="1"/>
+        <line num="107" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="109" type="stmt" count="1"/>
+        <line num="110" type="stmt" count="1"/>
+        <metrics loc="113" ncloc="86" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="35" coveredelements="35"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Outcome">
+      <file name="/home/runner/work/enum/enum/src/Outcome/Result.php">
+        <class name="FastForward\Enum\Outcome\Result" namespace="FastForward\Enum\Outcome">
+          <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="12" coveredelements="12"/>
+        </class>
+        <line num="50" type="method" name="description" visibility="public" complexity="4" crap="4" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="62" type="method" name="isSuccessful" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="70" type="method" name="isCompleteSuccess" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="78" type="method" name="isFailure" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <metrics loc="83" ncloc="58" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="12" coveredelements="12"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Pipeline">
+      <file name="/home/runner/work/enum/enum/src/Pipeline/FailureMode.php">
+        <class name="FastForward\Enum\Pipeline\FailureMode" namespace="FastForward\Enum\Pipeline">
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="49" type="method" name="description" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="60" type="method" name="stopsOnFailure" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <metrics loc="65" ncloc="46" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Process">
+      <file name="/home/runner/work/enum/enum/src/Process/SignalBehavior.php">
+        <class name="FastForward\Enum\Process\SignalBehavior" namespace="FastForward\Enum\Process">
+          <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="50" type="method" name="description" visibility="public" complexity="4" crap="4" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="62" type="method" name="isTerminalControl" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <metrics loc="67" ncloc="48" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+    </package>
+    <file name="/home/runner/work/enum/enum/src/ReversibleInterface.php">
+      <metrics loc="28" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="FastForward\Enum\Runtime">
+      <file name="/home/runner/work/enum/enum/src/Runtime/Environment.php">
+        <class name="FastForward\Enum\Runtime\Environment" namespace="FastForward\Enum\Runtime">
+          <metrics complexity="8" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+        </class>
+        <line num="51" type="method" name="description" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="64" type="method" name="isProduction" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="72" type="method" name="isPreProduction" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="80" type="method" name="isDebugFriendly" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <metrics loc="85" ncloc="60" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Sort">
+      <file name="/home/runner/work/enum/enum/src/Sort/CaseSensitivity.php">
+        <class name="FastForward\Enum\Sort\CaseSensitivity" namespace="FastForward\Enum\Sort">
+          <metrics complexity="8" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="13" coveredelements="13"/>
+        </class>
+        <line num="40" type="method" name="reverse" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="51" type="method" name="isSensitive" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="59" type="method" name="isInsensitive" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="69" type="method" name="normalize" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="80" type="method" name="equals" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <metrics loc="85" ncloc="52" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Sort/ComparisonResult.php">
+        <class name="FastForward\Enum\Sort\ComparisonResult" namespace="FastForward\Enum\Sort">
+          <metrics complexity="14" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="19" coveredelements="19"/>
+        </class>
+        <line num="44" type="method" name="fromComparisonResult" visibility="public" complexity="4" crap="4" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="56" type="method" name="toComparisonResult" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="70" type="method" name="reverse" visibility="public" complexity="4" crap="4" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="82" type="method" name="isComparable" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <metrics loc="87" ncloc="59" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="19" coveredelements="19"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Sort/NullsPosition.php">
+        <class name="FastForward\Enum\Sort\NullsPosition" namespace="FastForward\Enum\Sort">
+          <metrics complexity="12" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="17" coveredelements="17"/>
+        </class>
+        <line num="40" type="method" name="reverse" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="51" type="method" name="isFirst" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="59" type="method" name="isLast" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="70" type="method" name="compareNullability" visibility="public" complexity="7" crap="7" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <metrics loc="87" ncloc="59" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="17" coveredelements="17"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Sort/SortDirection.php">
+        <class name="FastForward\Enum\Sort\SortDirection" namespace="FastForward\Enum\Sort">
+          <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="16" coveredelements="16"/>
+        </class>
+        <line num="40" type="method" name="reverse" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="51" type="method" name="isAscending" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="59" type="method" name="isDescending" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="67" type="method" name="factor" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="80" type="method" name="applyToComparisonResult" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <metrics loc="85" ncloc="55" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="16" coveredelements="16"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\StateMachine">
+      <file name="/home/runner/work/enum/enum/src/StateMachine/HasTransitions.php">
+        <class name="FastForward\Enum\StateMachine\HasTransitions" namespace="FastForward\Enum\StateMachine">
+          <metrics complexity="12" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="27" coveredelements="27"/>
+        </class>
+        <line num="31" type="method" name="initialStateCases" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="39" type="method" name="allowedTransitions" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="41" type="stmt" count="3"/>
+        <line num="49" type="method" name="canTransitionTo" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="59" type="method" name="assertCanTransitionTo" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="69" type="method" name="isTerminal" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="77" type="method" name="isInitial" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="79" type="stmt" count="2"/>
+        <line num="85" type="method" name="initialStates" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="87" type="stmt" count="2"/>
+        <line num="89" type="stmt" count="2"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="110" type="method" name="terminalStates" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="112" type="stmt" count="2"/>
+        <metrics loc="115" ncloc="71" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="27" coveredelements="27"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/StateMachine/InvalidTransitionException.php">
+        <class name="FastForward\Enum\StateMachine\InvalidTransitionException" namespace="FastForward\Enum\StateMachine">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="32" type="method" name="between" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <metrics loc="43" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+    </package>
+    <package name="FastForward\Enum\Trait">
+      <file name="/home/runner/work/enum/enum/src/Trait/Comparable.php">
+        <class name="FastForward\Enum\Trait\Comparable" namespace="FastForward\Enum\Trait">
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="8" coveredelements="8"/>
+        </class>
+        <line num="28" type="method" name="is" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="30" type="stmt" count="11"/>
+        <line num="38" type="method" name="isNot" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="46" type="method" name="in" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="48" type="stmt" count="9"/>
+        <line num="54" type="method" name="notIn" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <metrics loc="59" ncloc="30" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasDescription.php">
+        <class name="FastForward\Enum\Trait\HasDescription" namespace="FastForward\Enum\Trait">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="26" type="method" name="description" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <metrics loc="33" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasLabel.php">
+        <class name="FastForward\Enum\Trait\HasLabel" namespace="FastForward\Enum\Trait">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="26" type="method" name="label" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <metrics loc="31" ncloc="15" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasNameLookup.php">
+        <class name="FastForward\Enum\Trait\HasNameLookup" namespace="FastForward\Enum\Trait">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="8" coveredelements="8"/>
+        </class>
+        <line num="30" type="method" name="tryFromName" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="43" type="method" name="fromName" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="46" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="56" type="method" name="hasName" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="58" type="stmt" count="3"/>
+        <metrics loc="61" ncloc="31" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasNameMap.php">
+        <class name="FastForward\Enum\Trait\HasNameMap" namespace="FastForward\Enum\Trait">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="28" type="method" name="nameMap" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <metrics loc="36" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasNames.php">
+        <class name="FastForward\Enum\Trait\HasNames" namespace="FastForward\Enum\Trait">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="28" type="method" name="names" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <metrics loc="33" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasOptions.php">
+        <class name="FastForward\Enum\Trait\HasOptions" namespace="FastForward\Enum\Trait">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="28" type="method" name="options" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <metrics loc="33" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasValueMap.php">
+        <class name="FastForward\Enum\Trait\HasValueMap" namespace="FastForward\Enum\Trait">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="28" type="method" name="valueMap" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <metrics loc="36" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/home/runner/work/enum/enum/src/Trait/HasValues.php">
+        <class name="FastForward\Enum\Trait\HasValues" namespace="FastForward\Enum\Trait">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="28" type="method" name="values" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="30" type="stmt" count="8"/>
+        <metrics loc="33" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <metrics files="35" loc="2751" ncloc="1796" classes="32" methods="122" coveredmethods="122" conditionals="0" coveredconditionals="0" statements="409" coveredstatements="409" elements="531" coveredelements="531"/>
+  </project>
+</coverage>
