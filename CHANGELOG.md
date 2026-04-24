@@ -10,3 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Bootstrap the initial enum component with helper APIs, reusable traits, packaged enum catalogs, state-machine utilities, documentation, and repository automation.
+
+### Fixed
+
+- Restore catalog and domain enum coverage so CI dependency and coverage gates pass.

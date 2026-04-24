@@ -41,7 +41,8 @@
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "fast-forward/dev-tools": "dev-main"
+        "fast-forward/dev-tools": "dev-main",
+        "phpunit/phpunit": "^12.5"
     },
     "minimum-stability": "stable",
     "autoload": {
