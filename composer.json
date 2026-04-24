@@ -37,7 +37,8 @@
         }
     ],
     "require": {
-        "php": "^8.3"
+        "php": "^8.3",
+        "ext-mbstring": "*"
     },
     "require-dev": {
         "fast-forward/dev-tools": "dev-main"
