@@ -1,0 +1,1 @@
+../../vendor/fast-forward/dev-tools/.agents/agents/docs-writer.md

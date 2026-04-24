@@ -1,0 +1,1 @@
+../../vendor/fast-forward/dev-tools/.agents/agents/php-style-curator.md
