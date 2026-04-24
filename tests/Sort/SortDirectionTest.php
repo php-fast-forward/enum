@@ -75,6 +75,9 @@ final class SortDirectionTest extends TestCase
         self::assertTrue(NullsPosition::Last->isLast());
         self::assertSame(-1, NullsPosition::First->compareNullability(null, 'value'));
         self::assertSame(1, NullsPosition::Last->compareNullability(null, 'value'));
+        self::assertSame(0, NullsPosition::First->compareNullability(null, null));
+        self::assertSame(1, NullsPosition::First->compareNullability('value', null));
+        self::assertSame(-1, NullsPosition::Last->compareNullability('value', null));
         self::assertSame(0, NullsPosition::First->compareNullability('left', 'right'));
     }
 

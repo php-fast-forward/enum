@@ -74,6 +74,11 @@ final class QuarterTest extends TestCase
     #[Test]
     public function itDescribesQuarters(): void
     {
-        self::assertSame('First quarter of the year, covering January through March.', Quarter::Q1->description());
+        self::assertSame([
+            'First quarter of the year, covering January through March.',
+            'Second quarter of the year, covering April through June.',
+            'Third quarter of the year, covering July through September.',
+            'Fourth quarter of the year, covering October through December.',
+        ], array_map(static fn(Quarter $quarter): string => $quarter->description(), Quarter::cases()));
     }
 }

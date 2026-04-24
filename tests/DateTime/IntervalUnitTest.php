@@ -69,9 +69,14 @@ final class IntervalUnitTest extends TestCase
     #[Test]
     public function itDescribesIntervalUnits(): void
     {
-        self::assertSame(
+        self::assertSame([
             'Represents one-second intervals for fine-grained timing and retry policies.',
-            IntervalUnit::Second->description(),
-        );
+            'Represents one-minute intervals for short-lived scheduling and cache policies.',
+            'Represents one-hour intervals for operational windows and batch execution.',
+            'Represents one-day intervals for daily schedules and retention policies.',
+            'Represents one-week intervals for weekly planning, reports, and cleanup jobs.',
+            'Represents one-month intervals for monthly billing, reporting, and rotation schedules.',
+            'Represents one-year intervals for annual cycles, compliance, and archival horizons.',
+        ], array_map(static fn(IntervalUnit $unit): string => $unit->description(), IntervalUnit::cases()));
     }
 }

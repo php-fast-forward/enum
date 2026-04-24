@@ -40,6 +40,16 @@ final class EnumHelperTest extends TestCase
      * @return void
      */
     #[Test]
+    public function itReturnsCasesForUnitEnums(): void
+    {
+        self::assertSame([Direction::North, Direction::South], EnumHelper::cases(Direction::class));
+        self::assertSame([Direction::North, Direction::South], EnumHelper::cases(Direction::North));
+    }
+
+    /**
+     * @return void
+     */
+    #[Test]
     public function itReturnsNamesForUnitEnums(): void
     {
         self::assertSame(['North', 'South'], EnumHelper::names(Direction::class));
@@ -98,6 +108,8 @@ final class EnumHelperTest extends TestCase
     {
         self::assertSame(Direction::South, EnumHelper::fromName(Direction::class, 'South'));
         self::assertSame(Direction::North, EnumHelper::fromName(Direction::South, 'North'));
+        self::assertTrue(EnumHelper::hasName(Direction::class, 'North'));
+        self::assertFalse(EnumHelper::hasName(Direction::class, 'East'));
         self::assertNull(EnumHelper::tryFromName(Direction::class, 'East'));
     }
 

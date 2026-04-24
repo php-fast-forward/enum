@@ -111,6 +111,18 @@ final class ComparisonOperatorTest extends TestCase
     #[Test]
     public function itDescribesOperators(): void
     {
-        self::assertSame('Matches when both operands are strictly equal.', ComparisonOperator::Equal->description());
+        self::assertSame([
+            'Matches when both operands are strictly equal.',
+            'Matches when both operands are not strictly equal.',
+            'Matches when the left operand is greater than the right operand.',
+            'Matches when the left operand is greater than or equal to the right operand.',
+            'Matches when the left operand is less than the right operand.',
+            'Matches when the left operand is less than or equal to the right operand.',
+            'Matches when the left operand is contained in the right-hand candidate set.',
+            'Matches when the left operand is not contained in the right-hand candidate set.',
+        ], array_map(
+            static fn(ComparisonOperator $operator): string => $operator->description(),
+            ComparisonOperator::cases(),
+        ));
     }
 }

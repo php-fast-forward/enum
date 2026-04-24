@@ -25,6 +25,7 @@ use PHPUnit\Framework\TestCase;
 use FastForward\Enum\StateMachine\HasTransitions;
 use FastForward\Enum\StateMachine\InvalidTransitionException;
 use FastForward\Enum\Tests\Support\ArticleWorkflow;
+use FastForward\Enum\Tests\Support\InferredWorkflow;
 
 #[CoversTrait(HasTransitions::class)]
 #[CoversClass(InvalidTransitionException::class)]
@@ -48,6 +49,20 @@ final class HasTransitionsTest extends TestCase
         );
         self::assertTrue(ArticleWorkflow::Draft->canTransitionTo(ArticleWorkflow::Reviewing));
         self::assertFalse(ArticleWorkflow::Draft->canTransitionTo(ArticleWorkflow::Published));
+
+        ArticleWorkflow::Draft->assertCanTransitionTo(ArticleWorkflow::Reviewing);
+    }
+
+    /**
+     * @return void
+     */
+    #[Test]
+    public function itInfersInitialStatesWhenNoInitialStateCasesAreConfigured(): void
+    {
+        self::assertSame([InferredWorkflow::Created], InferredWorkflow::initialStates());
+        self::assertSame([InferredWorkflow::Completed], InferredWorkflow::terminalStates());
+        self::assertTrue(InferredWorkflow::Created->isInitial());
+        self::assertFalse(InferredWorkflow::Running->isInitial());
     }
 
     /**

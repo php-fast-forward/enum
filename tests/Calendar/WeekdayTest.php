@@ -63,9 +63,14 @@ final class WeekdayTest extends TestCase
     #[Test]
     public function itDescribesWeekdays(): void
     {
-        self::assertSame(
+        self::assertSame([
             'First business day of the ISO week in most workflows and calendars.',
-            Weekday::Monday->description(),
-        );
+            'Second day of the ISO week, commonly used for regular working schedules.',
+            'Midweek day often used for routine meetings and delivery checkpoints.',
+            'Late-week working day before typical end-of-week wrap-up.',
+            'Final common business day before the weekend in many regions.',
+            'Weekend day typically treated as non-working in standard business calendars.',
+            'Weekend day that closes the ISO week and often precedes planning for Monday.',
+        ], array_map(static fn(Weekday $weekday): string => $weekday->description(), Weekday::cases()));
     }
 }

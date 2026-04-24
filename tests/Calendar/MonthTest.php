@@ -63,9 +63,19 @@ final class MonthTest extends TestCase
     #[Test]
     public function itDescribesMonths(): void
     {
-        self::assertSame(
+        self::assertSame([
             'Month 1 of the Gregorian calendar, commonly associated with yearly planning.',
-            Month::January->description(),
-        );
+            'Month 2 of the Gregorian calendar, with 28 days or 29 in leap years.',
+            'Month 3 of the Gregorian calendar, often used as the end of the first quarter.',
+            'Month 4 of the Gregorian calendar, following the close of Q1 in many businesses.',
+            'Month 5 of the Gregorian calendar, typically part of the second quarter.',
+            'Month 6 of the Gregorian calendar and common end of the first half-year.',
+            'Month 7 of the Gregorian calendar and common start of the second half-year.',
+            'Month 8 of the Gregorian calendar, often used in summer scheduling contexts.',
+            'Month 9 of the Gregorian calendar and common start of many annual cycles.',
+            'Month 10 of the Gregorian calendar, typically within fourth-quarter planning.',
+            'Month 11 of the Gregorian calendar, often used for year-end preparation.',
+            'Month 12 of the Gregorian calendar and common close of fiscal or calendar years.',
+        ], array_map(static fn(Month $month): string => $month->description(), Month::cases()));
     }
 }

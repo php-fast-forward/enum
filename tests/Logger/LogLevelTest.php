@@ -64,9 +64,15 @@ final class LogLevelTest extends TestCase
     #[Test]
     public function itDescribesLogLevels(): void
     {
-        self::assertSame(
+        self::assertSame([
             'System is unusable and requires immediate global attention.',
-            LogLevel::Emergency->description(),
-        );
+            'Action must be taken immediately to avoid severe service disruption.',
+            'Critical condition indicating serious failure in a core capability.',
+            'Runtime error indicating part of the current operation failed.',
+            'Potential issue that should be reviewed before it becomes an error.',
+            'Normal but noteworthy event that may deserve operational awareness.',
+            'Informational event describing expected application flow.',
+            'Verbose diagnostic information intended for debugging and development.',
+        ], array_map(static fn(LogLevel $level): string => $level->description(), LogLevel::cases()));
     }
 }
