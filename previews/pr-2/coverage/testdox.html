@@ -51,14 +51,15 @@
         </style>
     </head>
     <body>
-        <h2>Common Enum (FastForward\Enum\Tests\Common\CommonEnum)</h2>
+        <h2>Comparison Operator (FastForward\Enum\Tests\Comparison\ComparisonOperator)</h2>
         <ul>
-            <li class="success">It provides reusable comparison operators</li>
-            <li class="success">It rejects invalid set operator candidate sets</li>
-            <li class="success">It provides runtime and priority enums</li>
-            <li class="success">It provides severity and log level ordering</li>
-            <li class="success">It provides calendar enums</li>
-            <li class="success">It provides interval units and outcome results</li>
+            <li class="success">It exposes compact backed values</li>
+            <li class="success">It maps operators to symbols</li>
+            <li class="success">It compares scalar values</li>
+            <li class="success">It compares values against candidate sets</li>
+            <li class="success">It rejects invalid candidate sets</li>
+            <li class="success">It negates operators</li>
+            <li class="success">It describes operators</li>
         </ul>
         <h2>Comparison Result (FastForward\Enum\Tests\Sort\ComparisonResult)</h2>
         <ul>
@@ -67,12 +68,11 @@
             <li class="success">It converts comparison result cases back to comparator results</li>
             <li class="success">It can be reversed and checked for comparability</li>
         </ul>
-        <h2>Domain Enum (FastForward\Enum\Tests\DomainEnum)</h2>
+        <h2>Dispatch Mode (FastForward\Enum\Tests\Event\DispatchMode)</h2>
         <ul>
-            <li class="success">It provides event enums</li>
-            <li class="success">It provides container and pipeline enums</li>
-            <li class="success">It provides http enums</li>
-            <li class="success">It provides process enums</li>
+            <li class="success">It exposes stable backed values</li>
+            <li class="success">It identifies sync and async dispatch</li>
+            <li class="success">It describes dispatch modes</li>
         </ul>
         <h2>Enum Helper (FastForward\Enum\Tests\Helper\EnumHelper)</h2>
         <ul>
@@ -96,10 +96,95 @@
             <li class="success">It provides comparable helpers</li>
             <li class="success">It provides a default description trait</li>
         </ul>
+        <h2>Environment (FastForward\Enum\Tests\Runtime\Environment)</h2>
+        <ul>
+            <li class="success">It exposes stable backed values</li>
+            <li class="success">It identifies production and pre production environments</li>
+            <li class="success">It identifies debug friendly environments</li>
+            <li class="success">It describes environments</li>
+        </ul>
+        <h2>Failure Mode (FastForward\Enum\Tests\Pipeline\FailureMode)</h2>
+        <ul>
+            <li class="success">It exposes stable backed values</li>
+            <li class="success">It identifies stop on failure modes</li>
+            <li class="success">It describes failure modes</li>
+        </ul>
         <h2>Has Transitions (FastForward\Enum\Tests\StateMachine\HasTransitions)</h2>
         <ul>
             <li class="success">It supports state machine style transitions</li>
             <li class="success">It throws for invalid state machine transitions</li>
+        </ul>
+        <h2>Interval Unit (FastForward\Enum\Tests\DateTime\IntervalUnit)</h2>
+        <ul>
+            <li class="success">It exposes short labels</li>
+            <li class="success">It converts units to seconds</li>
+            <li class="success">It identifies calendar aware units</li>
+            <li class="success">It describes interval units</li>
+        </ul>
+        <h2>Log Level (FastForward\Enum\Tests\Logger\LogLevel)</h2>
+        <ul>
+            <li class="success">It compares log level weights</li>
+            <li class="success">It keeps log level order</li>
+            <li class="success">It describes log levels</li>
+        </ul>
+        <h2>Month (FastForward\Enum\Tests\Calendar\Month)</h2>
+        <ul>
+            <li class="success">It keeps calendar declaration order</li>
+            <li class="success">It identifies the quarter for a month</li>
+            <li class="success">It identifies quarter end months</li>
+            <li class="success">It describes months</li>
+        </ul>
+        <h2>Priority (FastForward\Enum\Tests\Common\Priority)</h2>
+        <ul>
+            <li class="success">It orders priorities by weight</li>
+            <li class="success">It compares priority weights</li>
+            <li class="success">It describes priorities</li>
+        </ul>
+        <h2>Quarter (FastForward\Enum\Tests\Calendar\Quarter)</h2>
+        <ul>
+            <li class="success">It keeps calendar declaration order</li>
+            <li class="success">It exposes the months inside a quarter</li>
+            <li class="success">It checks whether a month belongs to a quarter</li>
+            <li class="success">It resolves a quarter from a month</li>
+            <li class="success">It describes quarters</li>
+        </ul>
+        <h2>Result (FastForward\Enum\Tests\Outcome\Result)</h2>
+        <ul>
+            <li class="success">It identifies successful results</li>
+            <li class="success">It describes results</li>
+        </ul>
+        <h2>Scheme (FastForward\Enum\Tests\Http\Scheme)</h2>
+        <ul>
+            <li class="success">It exposes stable backed values</li>
+            <li class="success">It provides default ports</li>
+            <li class="success">It identifies secure schemes</li>
+            <li class="success">It describes schemes</li>
+        </ul>
+        <h2>Semester (FastForward\Enum\Tests\Calendar\Semester)</h2>
+        <ul>
+            <li class="success">It exposes the quarters inside a semester</li>
+            <li class="success">It exposes the months inside a semester</li>
+            <li class="success">It checks whether a month belongs to a semester</li>
+            <li class="success">It resolves a semester from calendar units</li>
+            <li class="success">It describes semesters</li>
+        </ul>
+        <h2>Service Lifetime (FastForward\Enum\Tests\Container\ServiceLifetime)</h2>
+        <ul>
+            <li class="success">It exposes stable backed values</li>
+            <li class="success">It identifies reusable lifetimes</li>
+            <li class="success">It describes service lifetimes</li>
+        </ul>
+        <h2>Severity (FastForward\Enum\Tests\Common\Severity)</h2>
+        <ul>
+            <li class="success">It compares severity weights</li>
+            <li class="success">It keeps severity order</li>
+            <li class="success">It describes severities</li>
+        </ul>
+        <h2>Signal Behavior (FastForward\Enum\Tests\Process\SignalBehavior)</h2>
+        <ul>
+            <li class="success">It exposes stable backed values</li>
+            <li class="success">It identifies terminal control behaviors</li>
+            <li class="success">It describes signal behaviors</li>
         </ul>
         <h2>Sort Direction (FastForward\Enum\Tests\Sort\SortDirection)</h2>
         <ul>
@@ -107,6 +192,12 @@
             <li class="success">It provides sort specific helpers</li>
             <li class="success">It provides nulls position helpers</li>
             <li class="success">It provides case sensitivity helpers</li>
+        </ul>
+        <h2>Weekday (FastForward\Enum\Tests\Calendar\Weekday)</h2>
+        <ul>
+            <li class="success">It identifies weekends and weekdays</li>
+            <li class="success">It keeps iso week order</li>
+            <li class="success">It describes weekdays</li>
         </ul>
     </body>
 </html>
