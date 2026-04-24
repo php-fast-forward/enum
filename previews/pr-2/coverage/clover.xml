@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1777049933">
-  <project timestamp="1777049933" name="Clover Coverage">
+<coverage generated="1777066507">
+  <project timestamp="1777066507" name="Clover Coverage">
     <package name="FastForward\Enum\Calendar">
       <file name="/home/runner/work/enum/enum/src/Calendar/Month.php">
         <class name="FastForward\Enum\Calendar\Month" namespace="FastForward\Enum\Calendar">
