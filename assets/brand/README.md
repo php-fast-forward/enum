@@ -2,6 +2,8 @@
 
 The repository-specific illustration is [`docs/_static/mascot-banner.png`](../../docs/_static/mascot-banner.png).
 
+The root README uses an immutable URL to this image at commit `fffb18b89aec20b4dcc50f8ea55f04b3b8dc7d89`, so it remains reachable when package archives exclude documentation assets. Documentation uses the checked-in local path.
+
 Dash selecting a typed case from a finite set.
 
 The [generation receipt](../../docs/_static/mascot-banner.receipt.json) records the complete prompt, reference hashes, output hash and publication authority. It replaces the generic welcome illustration; the canonical character remains owned by the [Fast Forward brand kit](https://github.com/php-fast-forward/.github/tree/654e4a463533f1d8b8223369b3b0bbc1a4a0badf).
