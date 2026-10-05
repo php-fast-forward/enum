@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Align the README with the approved Dash developer identity, record publication authorization, and exclude README-only artwork from package archives. (#5)
+
 ## [0.1.0] - 2026-04-24
 
 ### Added
