@@ -11,7 +11,9 @@ sorting helpers, and enum-driven workflows.
 [![License](https://img.shields.io/github/license/php-fast-forward/enum?color=64748B)](LICENSE)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/php-fast-forward?logo=githubsponsors&logoColor=white&color=EC4899)](https://github.com/sponsors/php-fast-forward)
 
-![Fast Forward Enum mascot banner](docs/_static/enum-mascot-banner.png)
+<p align="center">
+  <img src="assets/brand/dash.png" alt="Dash, the PHP Fast Forward fox, wearing a purple hoodie" width="320">
+</p>
 
 ## ✨ Features
 
