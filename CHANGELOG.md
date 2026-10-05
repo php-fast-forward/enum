@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Align the README with the approved Dash developer identity, record publication authorization, and exclude README-only artwork from package archives. (#5)
+- Replace the mascot banner with contextual Dash artwork for typed enum cases, align README and documentation references, record publication authorization, and exclude the artwork from package archives. (#5)
 
 ## [0.1.0] - 2026-04-24
 
