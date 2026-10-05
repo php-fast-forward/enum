@@ -2,7 +2,6 @@
 /.agents/              export-ignore
 /.dev-tools/           export-ignore
 /.github/              export-ignore
-/docs/                 export-ignore
 /tests/                export-ignore
 /.editorconfig         export-ignore
 /.gitattributes        export-ignore
@@ -12,6 +11,3 @@
 /AGENTS.md             export-ignore
 /phpunit.xml.dist      export-ignore
 /README.md             export-ignore
-/assets/brand/ export-ignore
-/docs/_static/mascot-banner.png export-ignore
-/docs/_static/mascot-banner.receipt.json export-ignore

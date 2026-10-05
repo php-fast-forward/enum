@@ -12,7 +12,7 @@ sorting helpers, and enum-driven workflows.
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/php-fast-forward?logo=githubsponsors&logoColor=white&color=EC4899)](https://github.com/sponsors/php-fast-forward)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/php-fast-forward/enum/fffb18b89aec20b4dcc50f8ea55f04b3b8dc7d89/docs/_static/mascot-banner.png" alt="Dash selecting a typed case from a finite set" width="840">
+  <img src="docs/_static/mascot-banner.png" alt="Dash selecting a typed case from a finite set" width="840">
 </p>
 
 ## ✨ Features
