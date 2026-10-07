@@ -11,4 +11,4 @@
 /.phpunit.result.cache export-ignore
 /AGENTS.md             export-ignore
 /phpunit.xml.dist      export-ignore
-/README.md             export-ignore
+/README*.md             export-ignore

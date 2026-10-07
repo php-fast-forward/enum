@@ -11,7 +11,9 @@ sorting helpers, and enum-driven workflows.
 [![License](https://img.shields.io/github/license/php-fast-forward/enum?color=64748B)](LICENSE)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/php-fast-forward?logo=githubsponsors&logoColor=white&color=EC4899)](https://github.com/sponsors/php-fast-forward)
 
-![Fast Forward Enum mascot banner](docs/_static/enum-mascot-banner.png)
+<p align="center">
+  <img src="docs/_static/mascot-banner.png" alt="Dash selecting a typed case from a finite set" width="840">
+</p>
 
 ## ✨ Features
 

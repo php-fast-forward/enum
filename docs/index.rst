@@ -26,8 +26,8 @@ Fast Forward Enum
 
    .. container:: col-lg-5 text-center
 
-      .. image:: _static/enum-mascot-banner.png
-         :alt: Fast Forward Enum mascot banner
+      .. image:: _static/mascot-banner.png
+         :alt: Dash selecting a typed case from a finite set
          :class: img-fluid w-100 rounded-4 shadow-sm border border-light-subtle bg-body-tertiary p-2
 
 Useful links
