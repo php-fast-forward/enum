@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Publish generated Wiki pages directly without tracking the Wiki as a Git submodule.
+
 - Replace the mascot banner with contextual Dash artwork for typed enum cases and align README and documentation references. (#5)
 
 ### Fixed

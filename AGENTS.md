@@ -86,7 +86,7 @@ Important paths:
 - `tests/Support/` enum fixtures used across tests
 - `README.md` package onboarding and usage examples
 - `docs/` Sphinx documentation for installation, quickstart, usage, API references, and advanced integration notes
-- `.github/wiki/` generated wiki content used by wiki workflows
+- `.dev-tools/wiki-generated/` local generated Markdown; `wiki.yml` publishes it to the separate Wiki repository without a submodule
 - `.agents/agents/` packaged role prompts for repository-specific delegation
 - `.agents/skills/` procedural skills used by the packaged agents
 - `.github/workflows/` CI workflows managed by `dev-tools`
@@ -143,7 +143,7 @@ Prefer onboarding-friendly examples for new users. Show practical enum calls ins
 
 Use `README.md` as the canonical short-form package guide and expand from there into Sphinx docs rather than duplicating content blindly. For new-user documentation, explain what each helper or enum catalog solves, then show the smallest useful example.
 
-When wiki output is part of the task, update `.github/wiki/` through the supported `dev-tools` wiki command instead of hand-editing generated pages.
+When wiki output is part of the task, use `dev-tools wiki --target=.dev-tools/wiki-generated` instead of hand-editing generated pages. Do not initialize a Wiki submodule during normal maintenance.
 
 ## Collaboration Notes
 
