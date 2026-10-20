@@ -161,3 +161,11 @@ When changing public API:
 - update tests and README in the same pass
 
 When opening repo-maintenance issues against `dev-tools`, prefer separate issues per bug instead of mixing unrelated failures into one report.
+
+## Bundled consumer skill
+
+Read [the consumer skill](resources/skills/fast-forward-enum/SKILL.md) when changing application integration
+examples, consumer guides or the skill. Keep its version contract, references
+and executable examples aligned with the supported public API. The canonical
+distributable source is `resources/skills`; it needs no installed copy or host
+alias. Repository maintenance continues to follow this AGENTS.md.

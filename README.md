@@ -316,3 +316,12 @@ Issues, pull requests, and documentation improvements are welcome.
 - [Tests workflow](https://github.com/php-fast-forward/enum/actions/workflows/tests.yml)
 - [MIT License](LICENSE)
 - [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119)
+
+## Consumer agent skill
+
+The package includes [fast-forward-enum](resources/skills/fast-forward-enum/SKILL.md) for application integration.
+It supports `fast-forward/enum:^0.2`; inspect the installed version.
+See [skill installation and lifecycle](resources/skills/fast-forward-enum/references/installation.md) for
+optional project synchronization with `llm/skills ^1.15`, guarded manual
+project/global copies and a pinned Skills CLI alternative. Shipping files does
+not install tooling or activate the skill in an agent session.
