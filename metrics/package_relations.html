@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2026-10-20 20:23:50        , with PHPMetrics 2.11.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2026-10-20 20:27:26        , with PHPMetrics 2.11.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -262,11 +262,10 @@
 
     var relations = [
     {
-        "name": "FastForward\\Enum\\Tests\\Trait",
+        "name": "FastForward\\Enum\\Tests\\Outcome",
         "size": 3000,
         "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Tests\\Support"
+            "PHPUnit\\Framework"
         ]
     },
     {
@@ -275,28 +274,15 @@
         "relations": []
     },
     {
-        "name": "FastForward\\Enum\\Tests\\Support",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\StateMachine",
+        "name": "FastForward\\Enum\\Tests\\Process",
         "size": 3000,
         "relations": [
             "PHPUnit\\Framework",
-            "FastForward\\Enum\\Tests\\Support"
+            "FastForward\\Enum\\Process"
         ]
     },
     {
-        "name": "FastForward\\Enum\\Tests\\DateTime",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\DateTime"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\DateTime",
+        "name": "FastForward\\Enum\\Process",
         "size": 3000,
         "relations": []
     },
@@ -316,113 +302,15 @@
         ]
     },
     {
-        "name": "FastForward\\Enum\\Tests\\Runtime",
+        "name": "FastForward\\Enum\\Tests\\Http",
         "size": 3000,
         "relations": [
             "PHPUnit\\Framework",
-            "FastForward\\Enum\\Runtime"
+            "FastForward\\Enum\\Http"
         ]
     },
     {
-        "name": "FastForward\\Enum\\Runtime",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Outcome",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Common",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Common"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Common",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Sort",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Sort"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Sort",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Container",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Container"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Container",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Calendar",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Calendar"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Calendar",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Comparison",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Comparison"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Comparison",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Process",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Process"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Process",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "FastForward\\Enum\\Tests\\Event",
-        "size": 3000,
-        "relations": [
-            "PHPUnit\\Framework",
-            "FastForward\\Enum\\Event"
-        ]
-    },
-    {
-        "name": "FastForward\\Enum\\Event",
+        "name": "FastForward\\Enum\\Http",
         "size": 3000,
         "relations": []
     },
@@ -440,15 +328,67 @@
         "relations": []
     },
     {
-        "name": "FastForward\\Enum\\Tests\\Http",
+        "name": "FastForward\\Enum\\Tests\\Runtime",
         "size": 3000,
         "relations": [
             "PHPUnit\\Framework",
-            "FastForward\\Enum\\Http"
+            "FastForward\\Enum\\Runtime"
         ]
     },
     {
-        "name": "FastForward\\Enum\\Http",
+        "name": "FastForward\\Enum\\Runtime",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Calendar",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Calendar"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Calendar",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "Symfony\\Component\\Process"
+        ]
+    },
+    {
+        "name": "Symfony\\Component\\Process",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Comparison",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Comparison"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Comparison",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Common",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Common"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Common",
         "size": 3000,
         "relations": []
     },
@@ -466,14 +406,85 @@
         "relations": []
     },
     {
-        "name": "FastForward\\Enum\\Trait",
+        "name": "FastForward\\Enum\\Tests\\DateTime",
         "size": 3000,
         "relations": [
-            "FastForward\\Enum\\Helper"
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\DateTime"
         ]
     },
     {
+        "name": "FastForward\\Enum\\DateTime",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\StateMachine",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Tests\\Support"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Support",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Sort",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Sort"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Sort",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Trait",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Tests\\Support"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Event",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Event"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Event",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "FastForward\\Enum\\Tests\\Container",
+        "size": 3000,
+        "relations": [
+            "PHPUnit\\Framework",
+            "FastForward\\Enum\\Container"
+        ]
+    },
+    {
+        "name": "FastForward\\Enum\\Container",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "FastForward\\Enum",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "global",
         "size": 3000,
         "relations": []
     },
@@ -485,9 +496,11 @@
         ]
     },
     {
-        "name": "global",
+        "name": "FastForward\\Enum\\Trait",
         "size": 3000,
-        "relations": []
+        "relations": [
+            "FastForward\\Enum\\Helper"
+        ]
     }
 ];
 
