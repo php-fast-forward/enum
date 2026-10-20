@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-10-20
+
+### Changed
+
+- Adopt Fast Forward Changelog automation and its project skill for validated contribution notes and reviewed version pull requests. ([#9](https://github.com/php-fast-forward/enum/pull/9))
+- Replace the mascot banner with contextual Dash artwork for typed enum cases and align README and documentation references. ([#5](https://github.com/php-fast-forward/enum/pull/5))
+- Publish generated Wiki pages directly without tracking the Wiki as a Git submodule. ([#9](https://github.com/php-fast-forward/enum/pull/9))
+
+### Fixed
+
+- Allow the isolated CI status publisher to read workflow job outcomes without granting write permissions to test jobs. ([#9](https://github.com/php-fast-forward/enum/pull/9))
+- Mirror verified Dependabot push test outcomes through a separate completion workflow so required statuses are available with the bot's restricted token. ([#9](https://github.com/php-fast-forward/enum/pull/9))
+- Pin Wiki publication to the merged DevTools workflow so a squash merge cannot invalidate its source revision. ([#8](https://github.com/php-fast-forward/enum/pull/8))
+
 ## [0.1.0] - 2026-04-24
 
 ### Added
@@ -17,4 +31,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update DevTools workflow wrappers so changelog releases and wiki-triggered test validation receive the permissions and triggers required by the shared automation (#3).
 
 
+[0.1.1]: https://github.com/php-fast-forward/enum/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/php-fast-forward/enum/releases/tag/v0.1.0
