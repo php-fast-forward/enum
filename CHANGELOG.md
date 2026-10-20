@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-10-20
+
+### Added
+
+- Bundle the fast-forward-enum consumer skill with executable examples, optional installation guidance and Composer discovery metadata. ([#12](https://github.com/php-fast-forward/enum/pull/12))
+
+### Changed
+
+- Restore the Changelog contributor skill through the development-only Composer skill manager and its reviewed GitHub source instead of versioning generated skill copies. ([#11](https://github.com/php-fast-forward/enum/pull/11))
+
+### Fixed
+
+- Use the published Changelog v0 workflow channel, identify the package and version transition in release PR titles, and remove obsolete automatic conflict resolution now that pending changes use independent fragments. ([#11](https://github.com/php-fast-forward/enum/pull/11))
+
 ## [0.1.1] - 2026-10-20
 
 ### Changed
@@ -31,5 +45,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update DevTools workflow wrappers so changelog releases and wiki-triggered test validation receive the permissions and triggers required by the shared automation (#3).
 
 
+[0.2.0]: https://github.com/php-fast-forward/enum/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/php-fast-forward/enum/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/php-fast-forward/enum/releases/tag/v0.1.0
