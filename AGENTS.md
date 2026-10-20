@@ -42,7 +42,7 @@ Use broader checks when the change touches those surfaces:
 ./vendor/bin/dev-tools phpdoc
 ./vendor/bin/dev-tools docs
 ./vendor/bin/dev-tools dependencies
-cpx --skip-local fast-forward/changelog:0.3.0 check --since=origin/main --no-interaction
+cpx --skip-local fast-forward/changelog check --since=origin/main --no-interaction
 ```
 
 Use `./vendor/bin/dev-tools wiki` only when wiki output or wiki-related docs need to be regenerated.
