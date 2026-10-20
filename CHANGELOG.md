@@ -5,20 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-### Changed
-
-- Publish generated Wiki pages directly without tracking the Wiki as a Git submodule.
-
-- Replace the mascot banner with contextual Dash artwork for typed enum cases and align README and documentation references. (#5)
-
-### Fixed
-
-- Pin Wiki publication to the merged DevTools workflow so a squash merge cannot invalidate its source revision. (#8)
-- Mirror verified Dependabot push test outcomes through a separate completion workflow so required statuses are available with the bot's restricted token.
-- Allow the isolated CI status publisher to read workflow job outcomes without granting write permissions to test jobs.
-
 ## [0.1.0] - 2026-04-24
 
 ### Added
@@ -31,5 +17,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update DevTools workflow wrappers so changelog releases and wiki-triggered test validation receive the permissions and triggers required by the shared automation (#3).
 
 
-[unreleased]: https://github.com/php-fast-forward/enum/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/php-fast-forward/enum/releases/tag/v0.1.0

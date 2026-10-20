@@ -42,10 +42,15 @@ Use broader checks when the change touches those surfaces:
 ./vendor/bin/dev-tools phpdoc
 ./vendor/bin/dev-tools docs
 ./vendor/bin/dev-tools dependencies
-./vendor/bin/dev-tools changelog:check
+cpx --skip-local fast-forward/changelog check --since=origin/main --no-interaction
 ```
 
 Use `./vendor/bin/dev-tools wiki` only when wiki output or wiki-related docs need to be regenerated.
+
+Changelog commands require PHP 8.5+ independently of this library's PHP baseline.
+Read `.agents/skills/fast-forward-changelog/SKILL.md` and [CONTRIBUTING.md](CONTRIBUTING.md)
+before adding a unique `.changelog/*.md` fragment. Preserve published history;
+the reviewed version PR consolidates fragments into `CHANGELOG.md`.
 
 ## Current Tooling Caveats
 
@@ -89,7 +94,7 @@ Important paths:
 - `.dev-tools/wiki-generated/` local generated Markdown; `wiki.yml` publishes it to the separate Wiki repository without a submodule
 - `.agents/agents/` packaged role prompts for repository-specific delegation
 - `.agents/skills/` procedural skills used by the packaged agents
-- `.github/workflows/` CI workflows managed by `dev-tools`
+- `.github/workflows/` CI workflows; `changelog.yml` uses standalone Fast Forward Changelog
 
 The current test layout is intentionally split by concern:
 
@@ -136,7 +141,7 @@ Any meaningful API or namespace change should be reflected in:
 
 - `README.md`
 - `docs/`
-- `CHANGELOG.md` once release tracking is initialized
+- a unique `.changelog/*.md` fragment for the next release
 - tests with real usage examples
 
 Prefer onboarding-friendly examples for new users. Show practical enum calls instead of only listing cases.
