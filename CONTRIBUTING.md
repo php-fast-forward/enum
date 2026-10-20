@@ -9,15 +9,20 @@ cpx --skip-local fast-forward/changelog check --no-interaction
 ```
 
 After committing, validate the contribution with `check --since=origin/main`.
-Read [.agents/skills/fast-forward-changelog/SKILL.md](.agents/skills/fast-forward-changelog/SKILL.md)
+After `composer install`, read `.agents/skills/fast-forward-changelog/SKILL.md`
 for the full procedure. Preserve published history and pending notes; do not add
 an `Unreleased` section to `CHANGELOG.md`.
 
 The GitHub workflow checks contributions, maintains PR feedback and prepares a
 version PR. Review its exact changes before merging: that approved merge enables
 automatic tag and GitHub Release publication. Installing the workflow publishes
-nothing. To review a future skill update, use `skill:install --check --json`
-with the deliberately selected release, followed by `--update` when appropriate.
+nothing.
+
+The development-only `llm/skills` Composer plugin restores the Changelog skill
+from the reviewed GitHub source in `skills.json`; generated files are ignored by
+Git. Use `composer skills:show` to inspect it and
+`composer skills:update --from=github` for an explicit refresh within the
+configured version range. Review `skills.json` before changing that range.
 
 This repository selects the published `v0` workflow channel. Release PRs use
 `chore(release): fast-forward/enum v{current_version} → v{next_version}` so the
