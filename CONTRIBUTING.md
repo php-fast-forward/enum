@@ -18,3 +18,7 @@ version PR. Review its exact changes before merging: that approved merge enables
 automatic tag and GitHub Release publication. Installing the workflow publishes
 nothing. To review a future skill update, use `skill:install --check --json`
 with the deliberately selected release, followed by `--update` when appropriate.
+
+This repository selects the published `v0` workflow channel. Release PRs use
+`chore(release): fast-forward/enum v{current_version} → v{next_version}` so the
+package and version transition are visible before review.
