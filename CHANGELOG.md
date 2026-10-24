@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-10-24
+
+### Changed
+
+- GitHub Actions(deps): bump php-fast-forward/dev-tools/.github/workflows/wiki-direct.yml from c637e7f9d8ae6059b8655996e56f6d17f874792c to 2d98b607bf832a82035ddcae3d689aef72842111
+
+  Update dependencies: `php-fast-forward/dev-tools/.github/workflows/wiki-direct.yml`.
+
+  ([#14](https://github.com/php-fast-forward/enum/pull/14), @dependabot[bot])
+
 ## [0.2.0] - 2026-10-20
 
 ### Added
@@ -45,6 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update DevTools workflow wrappers so changelog releases and wiki-triggered test validation receive the permissions and triggers required by the shared automation (#3).
 
 
+[0.2.1]: https://github.com/php-fast-forward/enum/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/php-fast-forward/enum/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/php-fast-forward/enum/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/php-fast-forward/enum/releases/tag/v0.1.0
