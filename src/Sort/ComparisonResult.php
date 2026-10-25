@@ -38,8 +38,6 @@ enum ComparisonResult implements ReversibleInterface
 
     /**
      * @param int $result
-     *
-     * @return self
      */
     public static function fromComparisonResult(int $result): self
     {

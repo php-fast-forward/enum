@@ -24,8 +24,6 @@ trait HasNameLookup
 {
     /**
      * @param string $name
-     *
-     * @return self|null
      */
     public static function tryFromName(string $name): ?self
     {
@@ -37,8 +35,6 @@ trait HasNameLookup
 
     /**
      * @param string $name
-     *
-     * @return self
      */
     public static function fromName(string $name): self
     {

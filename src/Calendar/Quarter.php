@@ -107,8 +107,6 @@ enum Quarter: int implements DescribedEnumInterface, LabeledEnumInterface
 
     /**
      * @param Month $month
-     *
-     * @return self
      */
     public static function fromMonth(Month $month): self
     {
