@@ -8,7 +8,7 @@
 ### tryFromName
 
 ```php
-public static tryFromName(string $name): self|null
+public static tryFromName(string $name): ?self
 ```
 
 * This method is **static**.
