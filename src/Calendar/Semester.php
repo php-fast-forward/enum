@@ -111,8 +111,6 @@ enum Semester: int implements DescribedEnumInterface, LabeledEnumInterface
 
     /**
      * @param Month $month
-     *
-     * @return self
      */
     public static function fromMonth(Month $month): self
     {
@@ -121,8 +119,6 @@ enum Semester: int implements DescribedEnumInterface, LabeledEnumInterface
 
     /**
      * @param Quarter $quarter
-     *
-     * @return self
      */
     public static function fromQuarter(Quarter $quarter): self
     {

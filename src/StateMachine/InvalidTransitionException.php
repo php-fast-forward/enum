@@ -26,8 +26,6 @@ final class InvalidTransitionException extends DomainException
     /**
      * @param UnitEnum $from
      * @param UnitEnum $to
-     *
-     * @return self
      */
     public static function between(UnitEnum $from, UnitEnum $to): self
     {
