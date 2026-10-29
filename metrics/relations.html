@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2026-10-25 03:26:46        , with PHPMetrics 2.11.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2026-10-29 23:33:26        , with PHPMetrics 2.11.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -267,10 +267,111 @@
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Outcome\\ResultTest",
+        "name": "\\FastForward\\Enum\\Trait\\HasLabel",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\HasValues",
         "size": 3000,
         "relations": [
-            "\\PHPUnit\\Framework\\TestCase"
+            "\\FastForward\\Enum\\Helper\\EnumHelper"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Helper\\EnumHelper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\HasOptions",
+        "size": 3000,
+        "relations": [
+            "\\FastForward\\Enum\\Helper\\EnumHelper"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\HasValueMap",
+        "size": 3000,
+        "relations": [
+            "\\FastForward\\Enum\\Helper\\EnumHelper"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\Comparable",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\HasNameLookup",
+        "size": 3000,
+        "relations": [
+            "\\FastForward\\Enum\\Helper\\EnumHelper"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\HasDescription",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\HasNameMap",
+        "size": 3000,
+        "relations": [
+            "\\FastForward\\Enum\\Helper\\EnumHelper"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Trait\\HasNames",
+        "size": 3000,
+        "relations": [
+            "\\FastForward\\Enum\\Helper\\EnumHelper"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\StateMachine\\InvalidTransitionException",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\DomainException",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\UnitEnum",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\StateMachine\\HasTransitions",
+        "size": 3000,
+        "relations": [
+            "\\FastForward\\Enum\\StateMachine\\InvalidTransitionException",
+            "\\static"
+        ]
+    },
+    {
+        "name": "\\static",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\enumClass",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\ValueError",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Tests\\DateTime\\IntervalUnitTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
+            "\\FastForward\\Enum\\DateTime\\IntervalUnit"
         ]
     },
     {
@@ -279,28 +380,20 @@
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Process\\SignalBehaviorTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Process\\SignalBehavior"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Process\\SignalBehavior",
+        "name": "\\FastForward\\Enum\\DateTime\\IntervalUnit",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Helper\\EnumHelperTest",
+        "name": "\\FastForward\\Enum\\Tests\\ConsumerSkillTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Helper\\EnumHelper"
+            "\\Symfony\\Component\\Process\\Process"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\Helper\\EnumHelper",
+        "name": "\\Symfony\\Component\\Process\\Process",
         "size": 3000,
         "relations": []
     },
@@ -331,106 +424,28 @@
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Runtime\\EnvironmentTest",
+        "name": "\\FastForward\\Enum\\Tests\\Process\\SignalBehaviorTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Runtime\\Environment"
+            "\\FastForward\\Enum\\Process\\SignalBehavior"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\Runtime\\Environment",
+        "name": "\\FastForward\\Enum\\Process\\SignalBehavior",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Calendar\\QuarterTest",
+        "name": "\\FastForward\\Enum\\Tests\\Event\\DispatchModeTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Calendar\\Quarter"
+            "\\FastForward\\Enum\\Event\\DispatchMode"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\Calendar\\Quarter",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Tests\\Calendar\\SemesterTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Calendar\\Semester"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Calendar\\Semester",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Tests\\Calendar\\MonthTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Calendar\\Month"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Calendar\\Month",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Tests\\Calendar\\WeekdayTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Calendar\\Weekday"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Calendar\\Weekday",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Tests\\ConsumerSkillTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\Symfony\\Component\\Process\\Process"
-        ]
-    },
-    {
-        "name": "\\Symfony\\Component\\Process\\Process",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Tests\\Comparison\\ComparisonOperatorTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Comparison\\ComparisonOperator"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Comparison\\ComparisonOperator",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Tests\\Common\\SeverityTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Common\\Severity"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Common\\Severity",
+        "name": "\\FastForward\\Enum\\Event\\DispatchMode",
         "size": 3000,
         "relations": []
     },
@@ -448,60 +463,60 @@
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Logger\\LogLevelTest",
+        "name": "\\FastForward\\Enum\\Tests\\Common\\SeverityTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Logger\\LogLevel"
+            "\\FastForward\\Enum\\Common\\Severity"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\Logger\\LogLevel",
+        "name": "\\FastForward\\Enum\\Common\\Severity",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\DateTime\\IntervalUnitTest",
+        "name": "\\FastForward\\Enum\\Tests\\Trait\\EnumTraitTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\DateTime\\IntervalUnit"
+            "\\FastForward\\Enum\\Tests\\Support\\Direction",
+            "\\FastForward\\Enum\\Tests\\Support\\Status"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\DateTime\\IntervalUnit",
+        "name": "\\FastForward\\Enum\\Tests\\Support\\Direction",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\StateMachine\\HasTransitionsTest",
-        "size": 3000,
-        "relations": [
-            "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Tests\\Support\\ArticleWorkflow",
-            "\\FastForward\\Enum\\Tests\\Support\\InferredWorkflow"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Tests\\Support\\ArticleWorkflow",
+        "name": "\\FastForward\\Enum\\Tests\\Support\\Status",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Support\\InferredWorkflow",
+        "name": "\\FastForward\\Enum\\Tests\\Runtime\\EnvironmentTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
+            "\\FastForward\\Enum\\Runtime\\Environment"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Runtime\\Environment",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Sort\\ComparisonResultTest",
+        "name": "\\FastForward\\Enum\\Tests\\Comparison\\ComparisonOperatorTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Sort\\ComparisonResult"
+            "\\FastForward\\Enum\\Comparison\\ComparisonOperator"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\Sort\\ComparisonResult",
+        "name": "\\FastForward\\Enum\\Comparison\\ComparisonOperator",
         "size": 3000,
         "relations": []
     },
@@ -531,34 +546,106 @@
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Trait\\EnumTraitTest",
+        "name": "\\FastForward\\Enum\\Tests\\Sort\\ComparisonResultTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Tests\\Support\\Direction",
-            "\\FastForward\\Enum\\Tests\\Support\\Status"
+            "\\FastForward\\Enum\\Sort\\ComparisonResult"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Support\\Direction",
+        "name": "\\FastForward\\Enum\\Sort\\ComparisonResult",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Support\\Status",
+        "name": "\\FastForward\\Enum\\Tests\\Outcome\\ResultTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Tests\\Logger\\LogLevelTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
+            "\\FastForward\\Enum\\Logger\\LogLevel"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Logger\\LogLevel",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\FastForward\\Enum\\Tests\\Event\\DispatchModeTest",
+        "name": "\\FastForward\\Enum\\Tests\\StateMachine\\HasTransitionsTest",
         "size": 3000,
         "relations": [
             "\\PHPUnit\\Framework\\TestCase",
-            "\\FastForward\\Enum\\Event\\DispatchMode"
+            "\\FastForward\\Enum\\Tests\\Support\\ArticleWorkflow",
+            "\\FastForward\\Enum\\Tests\\Support\\InferredWorkflow"
         ]
     },
     {
-        "name": "\\FastForward\\Enum\\Event\\DispatchMode",
+        "name": "\\FastForward\\Enum\\Tests\\Support\\ArticleWorkflow",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Tests\\Support\\InferredWorkflow",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Tests\\Calendar\\MonthTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
+            "\\FastForward\\Enum\\Calendar\\Month"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Calendar\\Month",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Tests\\Calendar\\QuarterTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
+            "\\FastForward\\Enum\\Calendar\\Quarter"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Calendar\\Quarter",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Tests\\Calendar\\WeekdayTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
+            "\\FastForward\\Enum\\Calendar\\Weekday"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Calendar\\Weekday",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\FastForward\\Enum\\Tests\\Calendar\\SemesterTest",
+        "size": 3000,
+        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
+            "\\FastForward\\Enum\\Calendar\\Semester"
+        ]
+    },
+    {
+        "name": "\\FastForward\\Enum\\Calendar\\Semester",
         "size": 3000,
         "relations": []
     },
@@ -576,97 +663,10 @@
         "relations": []
     },
     {
-        "name": "\\enumClass",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\UnitEnum",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\ValueError",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\StateMachine\\InvalidTransitionException",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\DomainException",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\StateMachine\\HasTransitions",
+        "name": "\\FastForward\\Enum\\Tests\\Helper\\EnumHelperTest",
         "size": 3000,
         "relations": [
-            "\\FastForward\\Enum\\StateMachine\\InvalidTransitionException",
-            "\\static"
-        ]
-    },
-    {
-        "name": "\\static",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\Comparable",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasLabel",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasValueMap",
-        "size": 3000,
-        "relations": [
-            "\\FastForward\\Enum\\Helper\\EnumHelper"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasNameMap",
-        "size": 3000,
-        "relations": [
-            "\\FastForward\\Enum\\Helper\\EnumHelper"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasNames",
-        "size": 3000,
-        "relations": [
-            "\\FastForward\\Enum\\Helper\\EnumHelper"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasDescription",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasValues",
-        "size": 3000,
-        "relations": [
-            "\\FastForward\\Enum\\Helper\\EnumHelper"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasNameLookup",
-        "size": 3000,
-        "relations": [
-            "\\FastForward\\Enum\\Helper\\EnumHelper"
-        ]
-    },
-    {
-        "name": "\\FastForward\\Enum\\Trait\\HasOptions",
-        "size": 3000,
-        "relations": [
+            "\\PHPUnit\\Framework\\TestCase",
             "\\FastForward\\Enum\\Helper\\EnumHelper"
         ]
     }
